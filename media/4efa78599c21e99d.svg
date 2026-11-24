@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="500" viewBox="0 0 1250 500" lang="zh" role="img" aria-labelledby="t d">
+<title id="t">一条实际路径与改变后的规划问题</title>
+<desc id="d">技能从历史 H 起动，实际动作逐步产生观测与奖励，在 K 步后交还控制。用当前表示和尾值可以重算已走路径的得分。历史被合并时须在相同行为下比较，缺失分支须取得新后果。探测与沿用两项完整规则在每个相容世界中按同一真实时钟计分。</desc>
+<defs><marker id="arr" orient="auto" markerWidth="7" markerHeight="7" refX="6" refY="3.5"><path d="M0,0 7,3.5 0,7" fill="#246a69"/></marker></defs>
+<g font-family="PingFang SC,Noto Sans CJK SC,sans-serif" fill="#18313a">
+<rect width="1250" height="500" fill="#fff"/>
+<text x="26" y="35" font-size="26" font-weight="650">实际执行的技能</text>
+<g stroke="#286c69" stroke-width="4" fill="none"><path d="M61 99H646" marker-end="url(#arr)"/></g>
+<path d="M213 98 Q264 81 314 63 T445 53" fill="none" stroke="#af7750" stroke-width="2.5" stroke-dasharray="8 6"/>
+<g fill="#246a69"><circle cx="65" cy="99" r="9"/><circle cx="213" cy="99" r="8"/><circle cx="355" cy="99" r="8"/><circle cx="515" cy="99" r="8"/></g>
+<g font-size="19"><text x="21" y="138">启动历史 H</text><text x="171" y="138">动作、反馈</text><text x="327" y="138">动作、反馈</text><text x="545" y="138">交还控制 H′</text><text x="450" y="59" fill="#87552d">新版可能选择的分支</text></g>
+<path d="M65 151v11H625v-11" fill="none" stroke="#6a8387" stroke-width="2"/>
+<text x="183" y="192" font-size="20">已走 K 步，实收主奖励和 G<tspan dy="6" font-size="14">K</tspan></text>
+<path d="M674 36V192" stroke="#d6e1df" stroke-width="2"/>
+<text x="701" y="45" font-size="24" font-weight="650">当前规划查询</text>
+<text x="701" y="91" font-size="25" fill="#006b60">Y<tspan dy="7" font-size="16" font-style="italic">Q</tspan><tspan dy="-7"> = G</tspan><tspan dy="7" font-size="16">K</tspan><tspan dy="-7"> + D</tspan><tspan dy="7" font-size="16">K</tspan><tspan dy="-7"> V</tspan><tspan dy="7" font-size="16">n−K</tspan><tspan dy="-7">(φ(H′))</tspan></text>
+<text x="701" y="129" font-size="20">φ、V 决定如何读出这段得分。</text>
+<text x="701" y="165" font-size="20">新版的动作与停止规则决定路径概率。</text>
+<rect x="18" y="215" width="1212" height="170" rx="8" fill="#f1f5f3"/>
+<path d="M403 233V365 M812 233V365" stroke="#c2d2cf" stroke-width="1.5"/>
+<g font-size="24" font-weight="650" fill="#0a635d"><text x="40" y="255">重算后果</text><text x="426" y="255">检验状态区别</text><text x="835" y="255">取得缺失分支</text></g>
+<g font-size="21"><text x="40" y="300">保留的历史足以重建新停点表示。</text><text x="40" y="339">重算已见路径；估计均值另需覆盖。</text><text x="426" y="300">相同状态、相同调用、不同来路。</text><text x="426" y="339">检验后果差与最优选择是否改变。</text><text x="835" y="300">现有行为无法辨别两种排序。</text><text x="835" y="339">在可比条件下试分支或新版技能。</text></g>
+<text x="27" y="430" font-size="24" fill="#8a5326" font-weight="650">真实时间内的选择</text>
+<text x="279" y="429" font-size="23">每个相容世界 e 中，比较同一对可执行规则的全程收益差 Δₑ。</text>
+<text x="279" y="467" font-size="20" fill="#41555a">探测期间的奖励、剩余时间和以后可获得的经验均计入回报。</text>
+</g></svg>

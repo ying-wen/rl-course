@@ -1,0 +1,3328 @@
+{
+ "built": "2026-11-24T23:01:42",
+ "course_pdf_pages": 2260,
+ "course_pdf_aligned": true,
+ "reading_pdf_pages": 2505,
+ "code": {
+  "chapters": {
+   "1": {
+    "dir": "第01章-强化学习的基本问题",
+    "files": 10,
+    "raw_bytes": 55655,
+    "excluded": [],
+    "zip_bytes": 16448,
+    "where": "dist/code/rl-yingwen-code-ch01-20261122.zip"
+   },
+   "2": {
+    "dir": "第02章-多臂赌博机",
+    "files": 26,
+    "raw_bytes": 428481,
+    "excluded": [],
+    "zip_bytes": 113757,
+    "where": "dist/code/rl-yingwen-code-ch02-20261122.zip"
+   },
+   "3": {
+    "dir": "第03章-有限马尔可夫决策过程",
+    "files": 19,
+    "raw_bytes": 147221,
+    "excluded": [],
+    "zip_bytes": 47426,
+    "where": "dist/code/rl-yingwen-code-ch03-20261122.zip"
+   },
+   "4": {
+    "dir": "第04章-动态规划",
+    "files": 20,
+    "raw_bytes": 498061,
+    "excluded": [],
+    "zip_bytes": 101611,
+    "where": "dist/code/rl-yingwen-code-ch04-20261122.zip"
+   },
+   "5": {
+    "dir": "第05章-蒙特卡洛与时序差分预测",
+    "files": 15,
+    "raw_bytes": 3148284,
+    "excluded": [
+     {
+      "files": 1,
+      "bytes": 3040431,
+      "what": [
+       "assets/sample14-mctd/learning-by-seed.csv"
+      ],
+      "command": "python3 demos/sample14_mctd.py"
+     }
+    ],
+    "zip_bytes": 47479,
+    "where": "dist/code/rl-yingwen-code-ch05-20261122.zip"
+   },
+   "6": {
+    "dir": "第06章-动作价值控制与离策略学习",
+    "files": 45,
+    "raw_bytes": 1011682,
+    "excluded": [],
+    "zip_bytes": 245064,
+    "where": "dist/code/rl-yingwen-code-ch06-20261122.zip"
+   },
+   "7": {
+    "dir": "第07章-多步学习与资格迹",
+    "files": 26,
+    "raw_bytes": 9671642,
+    "excluded": [],
+    "zip_bytes": 3607866,
+    "where": "dist/code/rl-yingwen-code-ch07-20261122.zip"
+   },
+   "8": {
+    "dir": "第08章-模型学习与规划",
+    "files": 85,
+    "raw_bytes": 6032099,
+    "excluded": [
+     {
+      "files": 1,
+      "bytes": 4262890,
+      "what": [
+       "demos/multiscale-results/raw.csv"
+      ],
+      "command": "python3 demos/multiscale_models.py"
+     }
+    ],
+    "zip_bytes": 484647,
+    "where": "dist/code/rl-yingwen-code-ch08-20261122.zip"
+   },
+   "9": {
+    "dir": "第09章-函数逼近",
+    "files": 53,
+    "raw_bytes": 1488307,
+    "excluded": [],
+    "zip_bytes": 901412,
+    "where": "dist/code/rl-yingwen-code-ch09-20261122.zip"
+   },
+   "10": {
+    "dir": "第10章-深度价值学习",
+    "files": 88,
+    "raw_bytes": 1626606,
+    "excluded": [],
+    "zip_bytes": 532931,
+    "where": "dist/code/rl-yingwen-code-ch10-20261122.zip"
+   },
+   "11": {
+    "dir": "第11章-策略梯度与行动者–评论者",
+    "files": 93,
+    "raw_bytes": 945800,
+    "excluded": [],
+    "zip_bytes": 535350,
+    "where": "dist/code/rl-yingwen-code-ch11-20261122.zip"
+   },
+   "12": {
+    "dir": "第12章-经验覆盖、模型规划与大规模训练",
+    "files": 59,
+    "raw_bytes": 5604921,
+    "excluded": [
+     {
+      "files": 1,
+      "bytes": 4262890,
+      "what": [
+       "demos/multiscale-results/raw.csv"
+      ],
+      "command": "python3 demos/multiscale_models.py"
+     }
+    ],
+    "zip_bytes": 378823,
+    "where": "dist/code/rl-yingwen-code-ch12-20261122.zip"
+   },
+   "13": {
+    "dir": "第13章-大语言环境下的强化学习",
+    "files": 89,
+    "raw_bytes": 9559590,
+    "excluded": [],
+    "zip_bytes": 1972980,
+    "where": "dist/code/rl-yingwen-code-ch13-20261122.zip"
+   },
+   "14": {
+    "dir": "第14章-物理世界中的具身强化学习",
+    "files": 47,
+    "raw_bytes": 1236465,
+    "excluded": [],
+    "zip_bytes": 693743,
+    "where": "dist/code/rl-yingwen-code-ch14-20261122.zip"
+   },
+   "15": {
+    "dir": "第15章-学习器与全程回报",
+    "files": 149,
+    "raw_bytes": 36267347,
+    "excluded": [
+     {
+      "files": 25,
+      "bytes": 15326373,
+      "what": [
+       "assets/crl-joint-v12/options-*-seed*.csv",
+       "assets/crl-joint-v12/meta-fixed-trajectory.csv"
+      ],
+      "command": "python3 demos/crl_joint_v12.py"
+     }
+    ],
+    "zip_bytes": 7477423,
+    "where": "dist/code/rl-yingwen-code-ch15-20261122.zip"
+   },
+   "16": {
+    "dir": "第16章-平均奖励与差分价值",
+    "files": 128,
+    "raw_bytes": 22623980,
+    "excluded": [
+     {
+      "files": 2,
+      "bytes": 5603966,
+      "what": [
+       "assets/sample14-avg-option/sample14-avg-td-updates.csv",
+       "assets/sample14-avg-option/sample14-option-skill-updates.csv"
+      ],
+      "command": "python3 demos/sample14_average_option.py"
+     }
+    ],
+    "zip_bytes": 4500859,
+    "where": "dist/code/rl-yingwen-code-ch16-20261122.zip"
+   },
+   "17": {
+    "dir": "第17章-流式学习与在线信用分配",
+    "files": 151,
+    "raw_bytes": 45784738,
+    "excluded": [
+     {
+      "files": 25,
+      "bytes": 15326373,
+      "what": [
+       "assets/crl-joint-v12/options-*-seed*.csv",
+       "assets/crl-joint-v12/meta-fixed-trajectory.csv"
+      ],
+      "command": "python3 demos/crl_joint_v12.py"
+     },
+     {
+      "files": 1,
+      "bytes": 9510444,
+      "what": [
+       "assets/course15-traces/training-values.csv"
+      ],
+      "command": "python3 demos/course15_traces.py --out assets/course15-traces"
+     }
+    ],
+    "zip_bytes": 7466326,
+    "where": "dist/code/rl-yingwen-code-ch17-20261122.zip"
+   },
+   "18": {
+    "dir": "第18章-智能体状态的充分性",
+    "files": 132,
+    "raw_bytes": 26913487,
+    "excluded": [
+     {
+      "files": 2,
+      "bytes": 5603966,
+      "what": [
+       "assets/sample14-avg-option/sample14-avg-td-updates.csv",
+       "assets/sample14-avg-option/sample14-option-skill-updates.csv"
+      ],
+      "command": "python3 demos/sample14_average_option.py"
+     }
+    ],
+    "zip_bytes": 5737659,
+    "where": "dist/code/rl-yingwen-code-ch18-20261122.zip"
+   },
+   "19": {
+    "dir": "第19章-通用价值函数",
+    "files": 147,
+    "raw_bytes": 36436679,
+    "excluded": [
+     {
+      "files": 25,
+      "bytes": 15326373,
+      "what": [
+       "assets/crl-joint-v12/options-*-seed*.csv",
+       "assets/crl-joint-v12/meta-fixed-trajectory.csv"
+      ],
+      "command": "python3 demos/crl_joint_v12.py"
+     }
+    ],
+    "zip_bytes": 7493205,
+    "where": "dist/code/rl-yingwen-code-ch19-20261122.zip"
+   },
+   "20": {
+    "dir": "第20章-状态构造与表示学习",
+    "files": 151,
+    "raw_bytes": 36556419,
+    "excluded": [
+     {
+      "files": 25,
+      "bytes": 15326373,
+      "what": [
+       "assets/crl-joint-v12/options-*-seed*.csv",
+       "assets/crl-joint-v12/meta-fixed-trajectory.csv"
+      ],
+      "command": "python3 demos/crl_joint_v12.py"
+     }
+    ],
+    "zip_bytes": 7525642,
+    "where": "dist/code/rl-yingwen-code-ch20-20261122.zip"
+   },
+   "21": {
+    "dir": "第21章-技能与时间抽象",
+    "files": 129,
+    "raw_bytes": 22807287,
+    "excluded": [
+     {
+      "files": 2,
+      "bytes": 5603966,
+      "what": [
+       "assets/sample14-avg-option/sample14-avg-td-updates.csv",
+       "assets/sample14-avg-option/sample14-option-skill-updates.csv"
+      ],
+      "command": "python3 demos/sample14_average_option.py"
+     }
+    ],
+    "zip_bytes": 4526207,
+    "where": "dist/code/rl-yingwen-code-ch21-20261122.zip"
+   },
+   "22": {
+    "dir": "第22章-技能模型与规划",
+    "files": 178,
+    "raw_bytes": 46591772,
+    "excluded": [
+     {
+      "files": 25,
+      "bytes": 15326373,
+      "what": [
+       "assets/crl-joint-v12/options-*-seed*.csv",
+       "assets/crl-joint-v12/meta-fixed-trajectory.csv"
+      ],
+      "command": "python3 demos/crl_joint_v12.py"
+     },
+     {
+      "files": 2,
+      "bytes": 5603966,
+      "what": [
+       "assets/sample14-avg-option/sample14-avg-td-updates.csv",
+       "assets/sample14-avg-option/sample14-option-skill-updates.csv"
+      ],
+      "command": "python3 demos/sample14_average_option.py"
+     },
+     {
+      "files": 1,
+      "bytes": 4262890,
+      "what": [
+       "demos/multiscale-results/raw.csv"
+      ],
+      "command": "python3 demos/multiscale_models.py"
+     }
+    ],
+    "zip_bytes": 7575567,
+    "where": "dist/code/rl-yingwen-code-ch22-20261122.zip"
+   },
+   "23": {
+    "dir": "第23章-元学习与可塑性",
+    "files": 175,
+    "raw_bytes": 37772464,
+    "excluded": [
+     {
+      "files": 25,
+      "bytes": 15326373,
+      "what": [
+       "assets/crl-joint-v12/options-*-seed*.csv",
+       "assets/crl-joint-v12/meta-fixed-trajectory.csv"
+      ],
+      "command": "python3 demos/crl_joint_v12.py"
+     }
+    ],
+    "zip_bytes": 7822231,
+    "where": "dist/code/rl-yingwen-code-ch23-20261122.zip"
+   },
+   "24": {
+    "dir": "第24章-整体智能体架构",
+    "files": 155,
+    "raw_bytes": 37832666,
+    "excluded": [
+     {
+      "files": 25,
+      "bytes": 15326373,
+      "what": [
+       "assets/crl-joint-v12/options-*-seed*.csv",
+       "assets/crl-joint-v12/meta-fixed-trajectory.csv"
+      ],
+      "command": "python3 demos/crl_joint_v12.py --output-dir runs/crl-joint"
+     }
+    ],
+    "zip_bytes": 7801914,
+    "where": "dist/code/rl-yingwen-code-ch24-20261122.zip"
+   },
+   "25": {
+    "dir": "第25章-知识的维护、检验与更新",
+    "files": 100,
+    "raw_bytes": 16719220,
+    "excluded": [],
+    "zip_bytes": 4420418,
+    "where": "dist/code/rl-yingwen-code-ch25-20261122.zip"
+   },
+   "26": {
+    "dir": "第26章-持续强化学习的基准设计与lifetime评价",
+    "files": 157,
+    "raw_bytes": 46241116,
+    "excluded": [
+     {
+      "files": 25,
+      "bytes": 15326373,
+      "what": [
+       "assets/crl-joint-v12/options-*-seed*.csv",
+       "assets/crl-joint-v12/meta-fixed-trajectory.csv"
+      ],
+      "command": "python3 demos/crl_joint_v12.py"
+     },
+     {
+      "files": 2,
+      "bytes": 5603966,
+      "what": [
+       "assets/sample14-avg-option/sample14-avg-td-updates.csv",
+       "assets/sample14-avg-option/sample14-option-skill-updates.csv"
+      ],
+      "command": "python3 demos/sample14_average_option.py"
+     },
+     {
+      "files": 1,
+      "bytes": 4262890,
+      "what": [
+       "demos/multiscale-results/raw.csv"
+      ],
+      "command": "python3 demos/multiscale_models.py"
+     }
+    ],
+    "zip_bytes": 7494544,
+    "where": "dist/code/rl-yingwen-code-ch26-20261122.zip"
+   }
+  },
+  "all": {
+   "key": "21d2558dcd659ac9db8338e6223018d08a49e2a38a28074ddbbf445803de0082|scrub-1",
+   "dest": "dist/code/rl-yingwen-code-all-20261122.zip",
+   "bytes": 89596817
+  }
+ },
+ "pages": {
+  "source": "pdf",
+  "reason": "页数相符，抽查 18 页与 web/pages 一致（最大平均差 5.6）",
+  "count": 2260,
+  "size": "1600x900",
+  "webp_quality": 74
+ },
+ "reading": {
+  "reading/chapter-00.html": {
+   "source": "rl-course/build/textbook-00.html",
+   "bytes_in": 1733748,
+   "bytes_out": 146958,
+   "data_uri": 62,
+   "slide_label": 1
+  },
+  "reading/chapter-01.html": {
+   "source": "rl-course/build/textbook-01.html",
+   "bytes_in": 7050445,
+   "bytes_out": 1197733,
+   "data_uri": 129,
+   "slide_label": 56
+  },
+  "reading/chapter-02.html": {
+   "source": "rl-course/build/textbook-02.html",
+   "bytes_in": 3778990,
+   "bytes_out": 1402420,
+   "data_uri": 95,
+   "slide_label": 18
+  },
+  "reading/chapter-03.html": {
+   "source": "rl-course/build/textbook-03.html",
+   "bytes_in": 4556397,
+   "bytes_out": 1848313,
+   "data_uri": 100,
+   "slide_label": 9
+  },
+  "reading/chapter-04.html": {
+   "source": "rl-course/build/textbook-04.html",
+   "bytes_in": 4396009,
+   "bytes_out": 1702032,
+   "data_uri": 97,
+   "slide_label": 14
+  },
+  "reading/chapter-05.html": {
+   "source": "rl-course/build/textbook-05.html",
+   "bytes_in": 3823118,
+   "bytes_out": 1407850,
+   "data_uri": 94,
+   "slide_label": 22
+  },
+  "reading/chapter-06.html": {
+   "source": "rl-course/build/textbook-06.html",
+   "bytes_in": 4715951,
+   "bytes_out": 2390190,
+   "data_uri": 98,
+   "slide_label": 27
+  },
+  "reading/chapter-07.html": {
+   "source": "rl-course/build/textbook-07.html",
+   "bytes_in": 4877125,
+   "bytes_out": 2136376,
+   "data_uri": 96,
+   "slide_label": 19
+  },
+  "reading/chapter-08.html": {
+   "source": "rl-course/build/textbook-08.html",
+   "bytes_in": 4524334,
+   "bytes_out": 1635557,
+   "data_uri": 97,
+   "slide_label": 23
+  },
+  "reading/chapter-09.html": {
+   "source": "rl-course/build/textbook-09.html",
+   "bytes_in": 8085972,
+   "bytes_out": 3396490,
+   "data_uri": 150,
+   "slide_label": 25
+  },
+  "reading/chapter-10.html": {
+   "source": "rl-course/build/textbook-10.html",
+   "bytes_in": 7470963,
+   "bytes_out": 2566937,
+   "data_uri": 138,
+   "slide_label": 23
+  },
+  "reading/chapter-11.html": {
+   "source": "rl-course/build/textbook-11.html",
+   "bytes_in": 12304401,
+   "bytes_out": 5278437,
+   "data_uri": 182,
+   "slide_label": 34
+  },
+  "reading/chapter-12.html": {
+   "source": "rl-course/build/textbook-12.html",
+   "bytes_in": 8259346,
+   "bytes_out": 4101260,
+   "data_uri": 165,
+   "slide_label": 16
+  },
+  "reading/chapter-13.html": {
+   "source": "rl-course/build/textbook-13.html",
+   "bytes_in": 22277855,
+   "bytes_out": 8594488,
+   "data_uri": 333,
+   "slide_label": 67
+  },
+  "reading/chapter-14.html": {
+   "source": "rl-course/build/textbook-14.html",
+   "bytes_in": 19463311,
+   "bytes_out": 4469725,
+   "data_uri": 231,
+   "slide_label": 38
+  },
+  "reading/chapter-15.html": {
+   "source": "rl-course/build/textbook-15.html",
+   "bytes_in": 5451303,
+   "bytes_out": 1984335,
+   "data_uri": 95,
+   "slide_label": 24
+  },
+  "reading/chapter-16.html": {
+   "source": "rl-course/build/textbook-16.html",
+   "bytes_in": 6335301,
+   "bytes_out": 3121236,
+   "data_uri": 99,
+   "slide_label": 36
+  },
+  "reading/chapter-17.html": {
+   "source": "rl-course/build/textbook-17.html",
+   "bytes_in": 5196299,
+   "bytes_out": 2541643,
+   "data_uri": 97,
+   "slide_label": 19
+  },
+  "reading/chapter-18.html": {
+   "source": "rl-course/build/textbook-18.html",
+   "bytes_in": 5171770,
+   "bytes_out": 2274113,
+   "data_uri": 96,
+   "slide_label": 26
+  },
+  "reading/chapter-19.html": {
+   "source": "rl-course/build/textbook-19.html",
+   "bytes_in": 4209944,
+   "bytes_out": 1806523,
+   "data_uri": 88,
+   "slide_label": 33
+  },
+  "reading/chapter-20.html": {
+   "source": "rl-course/build/textbook-20.html",
+   "bytes_in": 5056858,
+   "bytes_out": 2279306,
+   "data_uri": 88,
+   "slide_label": 21
+  },
+  "reading/chapter-21.html": {
+   "source": "rl-course/build/textbook-21.html",
+   "bytes_in": 4460942,
+   "bytes_out": 2064806,
+   "data_uri": 85,
+   "slide_label": 30
+  },
+  "reading/chapter-22.html": {
+   "source": "rl-course/build/textbook-22.html",
+   "bytes_in": 6809997,
+   "bytes_out": 2858640,
+   "data_uri": 100,
+   "slide_label": 28
+  },
+  "reading/chapter-23.html": {
+   "source": "rl-course/build/textbook-23.html",
+   "bytes_in": 6509230,
+   "bytes_out": 2784860,
+   "data_uri": 103,
+   "slide_label": 27
+  },
+  "reading/chapter-24.html": {
+   "source": "rl-course/build/textbook-24.html",
+   "bytes_in": 6222678,
+   "bytes_out": 2171951,
+   "data_uri": 98,
+   "slide_label": 18
+  },
+  "reading/chapter-25.html": {
+   "source": "rl-course/build/textbook-25.html",
+   "bytes_in": 5891720,
+   "bytes_out": 3250642,
+   "data_uri": 91,
+   "slide_label": 52
+  },
+  "reading/chapter-26.html": {
+   "source": "rl-course/build/textbook-26.html",
+   "bytes_in": 5597323,
+   "bytes_out": 2750515,
+   "data_uri": 115,
+   "slide_label": 34
+  },
+  "reading/prerequisites.html": {
+   "source": "rl-course/build/textbook-prerequisites.html",
+   "bytes_in": 1841278,
+   "bytes_out": 405346,
+   "data_uri": 60,
+   "slide_label": 0
+  },
+  "reading/book.html": {
+   "source": "rl-course/textbook.html",
+   "bytes_in": 145242940,
+   "bytes_out": 70517652,
+   "data_uri": 1662,
+   "slide_label": 740
+  },
+  "reading/ch13/derivations.html": {
+   "source": "web/chapter-13/reading/derivations.html",
+   "bytes_in": 368429,
+   "bytes_out": 366824,
+   "data_uri": 0,
+   "slide_label": 0
+  },
+  "reading/ch14/research-sources.html": {
+   "source": "web/chapter-14/research-sources.html",
+   "bytes_in": 123343,
+   "bytes_out": 121700,
+   "data_uri": 0,
+   "slide_label": 0
+  },
+  "reading/ch13/jagged-data.html": {
+   "source": "rl-course/assets/ch13-jagged-data/jagged-data.html",
+   "bytes_in": 107332,
+   "bytes_out": 107310,
+   "data_uri": 0,
+   "slide_label": 0
+  }
+ },
+ "stripped_links": {
+  ".html": {
+   "count": 112,
+   "examples": [
+    "01-完整版课程/web/planning.html",
+    "01-完整版课程/web/code.html",
+    "01-完整版课程/web/transfer.html",
+    "01-完整版课程/web/grid.html"
+   ]
+  },
+  ".md": {
+   "count": 44,
+   "examples": [
+    "01-完整版课程/rl-course/assets/crl-research-index/sutton-research-index/研究阅读导览.md",
+    "01-完整版课程/rl-course/COURSE-STRUCTURE.md",
+    "01-完整版课程/rl-course/CODE-MAP.md",
+    "01-完整版课程/rl-course/SOURCES.md"
+   ]
+  },
+  ".py": {
+   "count": 313,
+   "examples": [
+    "01-完整版课程/rl-course/demos/problem_foundations.py",
+    "01-完整版课程/rl-course/demos/average_reward_clock.py",
+    "01-完整版课程/rl-course/demos/v18_problem.py",
+    "01-完整版课程/rl-course/demos/v18_classic.py"
+   ]
+  },
+  ".csv": {
+   "count": 91,
+   "examples": [
+    "01-完整版课程/rl-course/demos/05-results/cue-learning.csv",
+    "01-完整版课程/rl-course/assets/v17-bandit/seed7-trace.csv",
+    "01-完整版课程/rl-course/assets/course15-mdp-dp/sample-trajectories.csv",
+    "01-完整版课程/rl-course/assets/course15-mdp-dp/finite-horizon.csv"
+   ]
+  },
+  ".json": {
+   "count": 211,
+   "examples": [
+    "01-完整版课程/rl-course/demos/05-results/problem-foundations.json",
+    "01-完整版课程/rl-course/assets/v18-problem/results.json",
+    "01-完整版课程/rl-course/assets/v18-classic/checks.json",
+    "01-完整版课程/rl-course/demos/classic-foundations-results.json"
+   ]
+  },
+  ".dat": {
+   "count": 11,
+   "examples": [
+    "01-完整版课程/rl-course/assets/classic-v10/mean-risk.dat",
+    "01-完整版课程/rl-course/assets/ch02-explore/gradient-runs.dat",
+    "01-完整版课程/rl-course/assets/v8-classic/gradient-bandit.dat",
+    "01-完整版课程/rl-course/assets/ch02-explore/regret-three-rules.dat"
+   ]
+  },
+  ".pdf": {
+   "count": 49,
+   "examples": [
+    "01-完整版课程/rl-course/assets/sample14-mctd/matched-steps-2000.pdf",
+    "01-完整版课程/rl-course/assets/ch06-control/mud-q-runs.pdf",
+    "01-完整版课程/rl-course/assets/ch06-double/example67.pdf",
+    "01-完整版课程/rl-course/assets/course15-traces/learning-n-cn.pdf"
+   ]
+  },
+  ".npz": {
+   "count": 11,
+   "examples": [
+    "01-完整版课程/rl-course/assets/course25-control/learned-q.npz",
+    "01-完整版课程/rl-course/assets/course15-fa/training-data.npz",
+    "01-完整版课程/rl-course/assets/dqn-model-v11/grid-weights.npz",
+    "01-完整版课程/rl-course/assets/ppo-sac-v11/policy-value-data.npz"
+   ]
+  },
+  "目录": {
+   "count": 1,
+   "examples": [
+    "01-完整版课程/rl-course/assets/ch06-control"
+   ]
+  }
+ },
+ "link_fallbacks": {
+  "slide": [
+   {
+    "file": "reading/chapter-08.html",
+    "label": "continual-onestep-exact",
+    "to": "ch08-opening"
+   },
+   {
+    "file": "reading/book.html",
+    "label": "continual-onestep-exact",
+    "to": "ch12-mbpo-short-rollouts"
+   }
+  ],
+  "anchor": [
+   {
+    "file": "reading/ch13/jagged-data.html",
+    "target": "reading/chapter-13.html#ch13-9-jagged",
+    "to": "reading/chapter-13.html"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-1",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-2",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-3",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-4",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-5",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-6",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-7",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-8",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-9",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-10",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-11",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-11",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-11",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-11",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-11",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-11",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-11",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-11",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-11",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-13-lecture-13-12",
+    "to": "reading/book.html#chapter-13"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-1",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-2",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-3",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-4",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-5",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-6",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-7",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   },
+   {
+    "file": null,
+    "target": "reading/book.html#chapter-14-lecture-14-8",
+    "to": "reading/book.html#chapter-14"
+   }
+  ]
+ },
+ "reader_unknown_labels": 0,
+ "dist": {
+  "bytes": 762086451,
+  "human": "726.8 MB",
+  "files": 4211,
+  "largest": [
+   {
+    "path": "code/rl-yingwen-code-all-20261122.zip",
+    "bytes": 89596817,
+    "human": "85.4 MB"
+   },
+   {
+    "path": "reading/book.html",
+    "bytes": 70517652,
+    "human": "67.3 MB"
+   },
+   {
+    "path": "pdf/rl-yingwen-reading-20261124.pdf",
+    "bytes": 51741447,
+    "human": "49.3 MB"
+   },
+   {
+    "path": "pdf/rl-yingwen-slides-all-20261124.pdf",
+    "bytes": 19034451,
+    "human": "18.2 MB"
+   },
+   {
+    "path": "reading/chapter-13.html",
+    "bytes": 8594488,
+    "human": "8.2 MB"
+   },
+   {
+    "path": "reading/book/chapter-13-452582e7.html",
+    "bytes": 8154786,
+    "human": "7.8 MB"
+   },
+   {
+    "path": "code/rl-yingwen-code-ch23-20261122.zip",
+    "bytes": 7822231,
+    "human": "7.5 MB"
+   },
+   {
+    "path": "code/rl-yingwen-code-ch24-20261122.zip",
+    "bytes": 7801914,
+    "human": "7.4 MB"
+   },
+   {
+    "path": "code/rl-yingwen-code-ch22-20261122.zip",
+    "bytes": 7575567,
+    "human": "7.2 MB"
+   },
+   {
+    "path": "code/rl-yingwen-code-ch20-20261122.zip",
+    "bytes": 7525642,
+    "human": "7.2 MB"
+   }
+  ]
+ },
+ "stale": [
+  "CITATION.cff",
+  "assets/reading-4966d7e749.js",
+  "assets/reading-7c8e49c480.js",
+  "assets/reading-af44916a2a.css",
+  "llms-full.txt",
+  "llms.txt",
+  "media/380aa744cc1f897f.webp",
+  "rl-yingwen-citation-20261124.bib",
+  "robots.txt",
+  "sitemap.xml"
+ ],
+ "warnings": [
+  "第07章-多步学习与资格迹：demos/ch07_lambda_learning_cn.py, demos/ch07_nstep_learning_cn.py 引用了 assets/course15-traces/training-values.csv 一类文件，保留这些文件",
+  "第18章-智能体状态的充分性：缺少 demos/multiscale_models.py，保留它的输出文件",
+  "reading/book.html 仍含 “../web/”：…-hidden=\"true\" tabindex=\"-1\"></a><span class=\"bu\">cd</span> ../web/chapter-13/reading/reader-source</span> …",
+  "2 处“对应课件”的页不在 read.html 里（阅读稿比逐页课件新），已退到前一页或本章首页，明细见 build-info.json 的 link_fallbacks",
+  "1 处阅读稿链接指向不存在的锚点，已退到章首，明细见 build-info.json 的 link_fallbacks"
+ ],
+ "files_changed": 68,
+ "postbuild": {
+  "version": "2026-11-24",
+  "assets": [
+   "assets/reading-4966d7e749.js",
+   "assets/reading-7c8e49c480.js",
+   "assets/reading-af44916a2a.css"
+  ],
+  "files": [
+   "CITATION.cff",
+   "llms-full.txt",
+   "llms.txt",
+   "reader/search-a793a9a2e4.json",
+   "rl-yingwen-citation-20261124.bib",
+   "robots.txt",
+   "sitemap.xml"
+  ],
+  "book_bytes": 2243439,
+  "book_split": {
+   "full_bytes": 67088686,
+   "shell_bytes": 2243439,
+   "chapters": 27
+  },
+  "pages": 35
+ }
+}

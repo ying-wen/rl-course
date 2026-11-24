@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+<title id="title">同一轨迹上迹的递推与到站截断</title>
+<desc id="desc">按时间顺序列出转角例第 5、6 步各自的四个阶段：先用写入前的表算误差，再给当前表项的迹加一，然后用步长乘误差乘迹写表，最后把迹乘以延续系数与 lambda 留给下一步。第 5 步误差为零，迹衰减为 (0.8, 0)；第 6 步误差为一，写表得到 (0.40, 0.50)，到站的延续系数为零，写完后迹清零。第 7、8 步不属于本次预测。</desc>
+<defs>
+<marker id="th" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#08676e"/></marker>
+<marker id="ih" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#183941"/></marker>
+<marker id="oh" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#955719"/></marker>
+<style>
+text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#183941;}
+.lab{font-size:19px;font-weight:600;}
+.sub{font-size:16px;fill:#4d6268;}
+.hd{font-size:22px;font-weight:650;}
+.b{font-size:18px;}
+.m{font-family:Georgia,"Times New Roman",serif;font-style:italic;}
+.g{fill:#8a9a9e;}
+</style></defs>
+<rect width="1200" height="660" fill="#fff"/>
+<text x="22" y="163" class="lab">① 读写入前的表</text>
+<text x="22" y="191" class="sub">算误差 δ</text>
+<text x="22" y="268" class="lab">② 当前表项</text>
+<text x="22" y="296" class="sub">的迹加一</text>
+<text x="22" y="373" class="lab">③ 写表</text>
+<text x="22" y="401" class="sub">Q ← Q + αδe</text>
+<text x="22" y="478" class="lab">④ 迹乘 Γλ</text>
+<text x="22" y="506" class="sub">留给下一步</text>
+<rect x="235" y="22" width="320" height="86" rx="9" fill="#eff6f5" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="395.0" y="56" text-anchor="middle" class="hd">第 5 步</text>
+<text x="395.0" y="90" text-anchor="middle" class="b">J<tspan dy="5" font-size="13">R</tspan><tspan dy="-5"> → W</tspan>，r = 0，Γ = 1</text>
+<rect x="635" y="22" width="320" height="86" rx="9" fill="#eff6f5" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="795.0" y="56" text-anchor="middle" class="hd">第 6 步</text>
+<text x="795.0" y="90" text-anchor="middle" class="b">W → C，r = 1，Γ = 0（到站）</text>
+<rect x="1015" y="22" width="170" height="86" rx="9" fill="#f3f5f5" stroke="#c4cdcf" stroke-width="1.5"/>
+<text x="1100" y="56" text-anchor="middle" class="hd g">第 7、8 步</text>
+<text x="1100" y="90" text-anchor="middle" class="b g">到站后继续配送</text>
+<rect x="1015" y="125" width="170" height="407" rx="9" fill="#f3f5f5" stroke="#c4cdcf" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="1100" y="215" text-anchor="middle" class="b g">不属于</text>
+<text x="1100" y="249" text-anchor="middle" class="b g">本次预测</text>
+<text x="1100" y="317" text-anchor="middle" class="b g">迹已清零</text>
+<text x="1100" y="351" text-anchor="middle" class="b g">不再改写</text>
+<text x="1100" y="419" text-anchor="middle" class="b g">Q 保留</text>
+<text x="1100" y="453" text-anchor="middle" class="b g">(.40, .50)</text>
+<rect x="235" y="125" width="320" height="92" rx="8" fill="#fff" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="253" y="163" class="b">δ = 0 + Q(Y) − Q(X)</text>
+<text x="253" y="195" class="b">  = 0 + 0 − 0 = <tspan font-weight="700">0</tspan></text>
+<rect x="235" y="230" width="320" height="92" rx="8" fill="#fff" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="253" y="258" class="b">e = (1, 0)</text>
+<text x="257" y="287" class="b m">X</text>
+<rect x="285" y="272" width="180" height="16" fill="#e7eeee"/>
+<rect x="285" y="272" width="180" height="16" fill="#4f9499"/>
+<text x="477" y="287" class="b">1</text>
+<text x="257" y="311" class="b m">Y</text>
+<rect x="285" y="296" width="180" height="16" fill="#e7eeee"/>
+<text x="477" y="311" class="b">0</text>
+<rect x="235" y="335" width="320" height="92" rx="8" fill="#fff" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="253" y="373" class="b">Q += .5 × 0 × (1, 0)</text>
+<text x="253" y="405" class="b">Q = (0, 0)，没有变化</text>
+<rect x="235" y="440" width="320" height="92" rx="8" fill="#fff" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="253" y="468" class="b">e = (.8, 0)，Γλ = .8</text>
+<text x="257" y="497" class="b m">X</text>
+<rect x="285" y="482" width="180" height="16" fill="#e7eeee"/>
+<rect x="285" y="482" width="144.0" height="16" fill="#4f9499"/>
+<text x="477" y="497" class="b">.8</text>
+<text x="257" y="521" class="b m">Y</text>
+<rect x="285" y="506" width="180" height="16" fill="#e7eeee"/>
+<text x="477" y="521" class="b">0</text>
+<rect x="635" y="125" width="320" height="92" rx="8" fill="#fff" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="653" y="163" class="b">δ = 1 − Q(Y)（不再自举）</text>
+<text x="653" y="195" class="b">  = 1 − 0 = <tspan font-weight="700">1</tspan></text>
+<rect x="635" y="230" width="320" height="92" rx="8" fill="#fff" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="653" y="258" class="b">e = (.8, 1)</text>
+<text x="657" y="287" class="b m">X</text>
+<rect x="685" y="272" width="180" height="16" fill="#e7eeee"/>
+<rect x="685" y="272" width="144.0" height="16" fill="#4f9499"/>
+<text x="877" y="287" class="b">.8</text>
+<text x="657" y="311" class="b m">Y</text>
+<rect x="685" y="296" width="180" height="16" fill="#e7eeee"/>
+<rect x="685" y="296" width="180" height="16" fill="#4f9499"/>
+<text x="877" y="311" class="b">1</text>
+<rect x="635" y="335" width="320" height="92" rx="8" fill="#f8f4ed" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="653" y="373" class="b">Q += .5 × 1 × (.8, 1)</text>
+<text x="653" y="405" class="b" font-weight="700" fill="#955719">Q = (.40, .50)</text>
+<rect x="635" y="440" width="320" height="92" rx="8" fill="#fff" stroke="#7aa9a8" stroke-width="1.5"/>
+<text x="653" y="468" class="b">e = (0, 0)，Γλ = 0</text>
+<text x="657" y="497" class="b m">X</text>
+<rect x="685" y="482" width="180" height="16" fill="#e7eeee"/>
+<text x="877" y="497" class="b">0</text>
+<text x="657" y="521" class="b m">Y</text>
+<rect x="685" y="506" width="180" height="16" fill="#e7eeee"/>
+<text x="877" y="521" class="b">0</text>
+<path d="M558 395 C 600 395, 595 185, 630 172" fill="none" stroke="#183941" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#ih)"/>
+<path d="M558 500 C 600 500, 595 290, 630 277" fill="none" stroke="#08676e" stroke-width="3" marker-end="url(#th)"/>
+<path d="M958 486 H1008" fill="none" stroke="#955719" stroke-width="3" stroke-dasharray="5 5"/>
+<path d="M974 474 L990 498 M990 474 L974 498" stroke="#955719" stroke-width="3.5"/>
+<path d="M240 588 H300" stroke="#08676e" stroke-width="3" marker-end="url(#th)"/>
+<text x="312" y="594" class="b">带进下一步的迹</text>
+<path d="M470 588 H530" stroke="#183941" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#ih)"/>
+<text x="542" y="594" class="b">下一步读到的旧表</text>
+<path d="M720 577 L736 599 M736 577 L720 599" stroke="#955719" stroke-width="3.5"/>
+<text x="750" y="594" class="b">到站：写完后才乘 Γ = 0，迹不再传下去</text>
+<text x="240" y="636" class="sub">记号：<tspan class="m">X</tspan> = (J<tspan dy="5" font-size="12">R</tspan><tspan dy="-5">，向左)，</tspan><tspan class="m">Y</tspan> = (W，绕行)；α = .5，λ = .8；条形长度 = 该表项的资格迹</text>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="568" viewBox="0 0 1040 568" role="img" aria-labelledby="title desc" data-crl-visual="v1">
+  <title id="title">气球沿途测风后，规划会改选风层吗？</title>
+  <desc id="desc">侧视图中，气球已在较低风层向右漂移，实心点表示经过的测风位置。较高风层还没飞到，向左的风是根据预报和沿途测量得到的估计。气球可以保持高度，也可以升层。若规划读入新的预测，按预计总驻留时长得到的技能排序可能保持，也可能翻转。实际服务时长须由读取和关闭读取两组各自飞出的轨迹，在同一固定期限内比较。本图是机制示意。</desc>
+  <defs>
+    <marker id="estimated-arrow" markerUnits="userSpaceOnUse" viewBox="0 0 13 12" markerWidth="13" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M1 1 L11 6 L1 11" fill="none" stroke="#287575" stroke-width="2.3" stroke-linejoin="round"/>
+    </marker>
+    <marker id="measured-arrow" markerUnits="userSpaceOnUse" viewBox="0 0 13 12" markerWidth="13" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#a6502d"/>
+    </marker>
+    <marker id="branch-arrow" markerUnits="userSpaceOnUse" viewBox="0 0 9 10" markerWidth="9" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1 1 L8 5 L1 9" fill="none" stroke="#647783" stroke-width="1.7" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      text {font-family:"PingFang SC","Noto Sans CJK SC","Hiragino Sans GB",sans-serif;fill:#193346}
+      .heading {font-size:24px;font-weight:650}
+      .label {font-size:19px;font-weight:600}
+      .body {font-size:17px}
+      .small {font-size:15px;fill:#465e69}
+      .warm {fill:#984827}
+      .teal {fill:#286c6d}
+      .branch {fill:none;stroke:#647783;stroke-width:2;marker-end:url(#branch-arrow)}
+      .wind-estimate {fill:none;stroke:#287575;stroke-width:2.8;stroke-dasharray:8 6;marker-end:url(#estimated-arrow)}
+    </style>
+  </defs>
+  <rect width="1040" height="568" fill="#fff"/>
+
+  <g id="observations-and-estimates">
+    <text x="25" y="39" class="heading">沿途测到了哪一层风？</text>
+    <rect x="25" y="61" width="452" height="105" rx="8" fill="#eaf3f2"/>
+    <rect x="25" y="170" width="452" height="124" rx="8" fill="#f9f1e9"/>
+    <text x="42" y="90" class="label teal">上层 · 估计</text>
+    <text x="42" y="118" class="body">预报结合沿途测风</text>
+    <text x="42" y="142" class="small">气球尚未飞到这里</text>
+    <path class="wind-estimate" d="M419 111 H310"/>
+    <text x="364" y="142" text-anchor="middle" class="small teal">预计向左吹</text>
+
+    <text x="42" y="200" class="label warm">下层 · 实测</text>
+    <path d="M61 233 C112 239 137 221 184 230 S239 242 271 234" fill="none" stroke="#a6502d" stroke-width="2.8"/>
+    <g fill="#a6502d" stroke="#fff" stroke-width="1.5">
+      <circle cx="81" cy="234" r="5.5"/>
+      <circle cx="132" cy="230" r="5.5"/>
+      <circle cx="182" cy="230" r="5.5"/>
+      <circle cx="236" cy="238" r="5.5"/>
+    </g>
+    <text x="42" y="271" class="small">实心点为已飞过的测风位置</text>
+    <g id="balloon">
+      <path d="M265 210 C252 196 259 177 274 177 C290 177 296 196 283 210 L278 217 H271 Z" fill="#e6a178" stroke="#8f4a2e" stroke-width="1.8"/>
+      <path d="M270 215 L272 226 M280 215 L278 226" stroke="#8f4a2e" stroke-width="1.8"/>
+      <rect x="269" y="225" width="12" height="9" rx="2" fill="#334e5b"/>
+    </g>
+    <path d="M299 230 H418" fill="none" stroke="#a6502d" stroke-width="3" marker-end="url(#measured-arrow)"/>
+    <text x="358" y="259" text-anchor="middle" class="small warm">此处向右吹</text>
+    <path d="M73 310 h57 m-31 0 7-18 7 18 m-11-7 h8" fill="none" stroke="#657b80" stroke-width="1.8"/>
+    <circle cx="106" cy="292" r="2" fill="#657b80"/>
+    <text x="142" y="315" class="small">地面站</text>
+    <text x="25" y="356" class="body">气球可以改变高度，水平漂移由风决定。</text>
+  </g>
+
+  <path d="M500 17 V361" stroke="#d2dadc" stroke-width="1.5"/>
+  <g id="planning-comparison">
+    <text x="523" y="39" class="heading">规划读取预测后，技能排序会变吗？</text>
+    <text x="523" y="77" class="body">在同一位置比较两种可执行技能</text>
+    <text x="523" y="108" class="label">保持</text>
+    <text x="576" y="108" class="body">维持当前高度，到时重选</text>
+    <text x="523" y="137" class="label">换层</text>
+    <text x="576" y="137" class="body">尝试升至上层，抵达或超时重选</text>
+    <path d="M523 155 H1014" stroke="#d2dadc" stroke-width="1.2"/>
+    <text x="537" y="189" class="small">读入新预测前</text>
+    <text x="810" y="189" class="small">读入新预测后</text>
+    <rect x="523" y="228" width="172" height="54" rx="7" fill="#edf1f3"/>
+    <text x="609" y="261" text-anchor="middle" class="label">保持 ＞ 换层</text>
+    <path class="branch" d="M695 255 H732 Q742 255 742 245 V234 Q742 223 755 223 H796"/>
+    <path class="branch" d="M695 255 H732 Q742 255 742 265 V278 Q742 289 755 289 H796"/>
+    <rect x="805" y="201" width="208" height="44" rx="7" fill="#edf1f3"/>
+    <text x="817" y="229" class="label">保持 ＞ 换层</text>
+    <text x="964" y="228" class="small">不变</text>
+    <rect x="805" y="267" width="208" height="44" rx="7" fill="#e4f0ee"/>
+    <text x="817" y="295" class="label teal">换层 ＞ 保持</text>
+    <text x="964" y="294" class="small teal">翻转</text>
+    <text x="523" y="356" class="body">按技能执行期间和交还控制后的预计驻留时长排序。</text>
+  </g>
+
+  <g id="actual-fixed-horizon-outcome">
+    <rect x="16" y="379" width="1008" height="148" rx="10" fill="#f3f5f4"/>
+    <text x="32" y="414" class="heading">沿各自飞出的轨迹，比较固定期限内的服务时长</text>
+    <text x="32" y="442" class="body">相同初始条件和风场，两组都照常学习</text>
+    <text x="32" y="486" class="body">同一时刻起飞</text>
+    <path class="branch" d="M147 479 H169 Q180 479 180 469 Q180 460 193 460 H212"/>
+    <path class="branch" d="M147 479 H169 Q180 479 180 489 Q180 500 193 500 H212"/>
+    <text x="224" y="467" class="body">规划读取新预测</text>
+    <text x="224" y="507" class="body">关闭新预测读取</text>
+    <path class="branch" d="M369 461 H512"/>
+    <path class="branch" d="M369 501 H512"/>
+    <path d="M523 445 V513" stroke="#91a2a3" stroke-width="2"/>
+    <text x="544" y="464" class="label">飞行到期时，分别累计服务分钟数</text>
+    <text x="544" y="497" class="body">计入距站 50 公里内且仍可服务的时间。</text>
+  </g>
+  <text x="25" y="554" class="small">教学示意（非实验结果）。图中风向与排序用于说明决策过程。</text>
+</svg>

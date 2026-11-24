@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="432" viewBox="0 0 1180 432"
+     xml:lang="zh-CN" role="img" aria-labelledby="title description">
+  <title id="title">未试分支怎样限制新版技能的价值估计</title>
+  <desc id="description">固定可比起点、两步规则与尾值。段目标 Y 在零与一之间。旧技能总向左，新技能以相同概率向左或向右。两个环境在旧技能下的记录分布相同，左路段目标均值解析已知为 0.4。在右路均值为零的候选环境，新技能均值为 0.2；在右路均值为一的候选环境，新技能均值为 0.7。这两种情形与价值 0.5 的备选行动给出相反排序。在每次启动前的历史与选路条件下，若右路段目标具有同一条件均值，可用可比的真实右路样本估计该均值的区间 [ℓ,u]，相同置信水平下新版值的区间为 [0.2+0.5ℓ, 0.2+0.5u]。区间下端高于 0.5，选新版；上端低于 0.5，选备选。区间含 0.5 时仍不能保证严格排序，可衡量进一步探测的收益和成本。一次右路观测只提供一个可能有波动的段样本。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.4" markerHeight="5.4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#086755"/>
+    </marker>
+    <marker id="unknown" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.4" markerHeight="5.4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#697a83"/>
+    </marker>
+  </defs>
+  <rect width="1180" height="432" fill="white"/>
+  <g font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#19344a">
+    <!-- The two arrows end at the same elapsed time; the dashed one was never followed by the old skill. -->
+    <text x="29" y="31" font-size="21">同一起点、两步规则与尾值；段目标 Y ∈ [0, 1]。</text>
+    <text x="29" y="73" font-size="26" font-weight="650">旧技能只走左，新版左右各半</text>
+    <circle cx="73" cy="161" r="7.4" fill="#086755"/>
+    <text x="36" y="193" font-size="20">起点</text>
+    <path d="M73 161C117 161 140 123 200 123H275" fill="none" stroke="#086755" stroke-width="3.5" marker-end="url(#a)"/>
+    <path d="M73 161C117 161 140 202 200 202H275" fill="none" stroke="#697a83" stroke-width="3.1" stroke-dasharray="8 6" marker-end="url(#unknown)"/>
+    <text x="169" y="112" font-size="20" fill="#086755">左路 · 已走</text>
+    <text x="131" y="231" font-size="20" fill="#54666f">右路 · 旧版未走</text>
+    <text x="316" y="131" font-size="22">左均值 0.4</text>
+    <text x="316" y="158" font-size="18" fill="#455965">解析已知</text>
+    <text x="316" y="209" font-size="22">右均值 μ</text>
+    <text x="316" y="236" font-size="18" fill="#455965">旧日志未识别</text>
+
+    <!-- The interval axis is drawn to scale: .5 lies three fifths of the way from .2 to .7. -->
+    <text x="501" y="72" font-size="26" font-weight="650">两个环境给出同分布的旧日志</text>
+    <text x="501" y="107" font-size="22">新版均值 q = ½ × 0.4 + ½ × μ</text>
+    <text x="509" y="152" font-size="19" fill="#455965">环境甲 · μ = 0</text>
+    <text x="983" y="152" font-size="19" fill="#455965">环境乙 · μ = 1</text>
+    <text x="878" y="146" font-size="19" fill="#824719" text-anchor="middle">备选行动 0.5</text>
+    <path d="M519 177H1127" fill="none" stroke="#c2cecf" stroke-width="1.8"/>
+    <path d="M548 177H1098" fill="none" stroke="#398b78" stroke-width="5"/>
+    <path d="M878 152V192" fill="none" stroke="#9a571e" stroke-width="2.8" stroke-dasharray="5 4"/>
+    <g fill="#086755"><circle cx="548" cy="177" r="7.2"/><circle cx="1098" cy="177" r="7.2"/></g>
+    <g font-weight="650" font-size="23" text-anchor="middle">
+      <text x="564" y="211">q = 0.2</text>
+      <text x="1077" y="211">q = 0.7</text>
+    </g>
+    <g font-size="19" fill="#455965" text-anchor="middle">
+      <text x="564" y="240">选备选行动</text><text x="1077" y="240">选新版技能</text>
+    </g>
+    <path d="M28 262H1148" stroke="#c9d8d8" stroke-width="1.5"/>
+
+    <text x="30" y="300" font-size="25" font-weight="650">实际试走右路以后</text>
+    <text x="276" y="299" font-size="19" fill="#455965">一次试走只给一个段样本，观测值可以波动。</text>
+    <text x="31" y="343" font-size="21">可比的右路样本</text>
+    <path d="M204 336H242" fill="none" stroke="#086755" stroke-width="2.4" marker-end="url(#a)"/>
+    <text x="257" y="343" font-size="21">μ 的区间 [ℓ, u]</text>
+    <path d="M434 336H475" fill="none" stroke="#086755" stroke-width="2.4" marker-end="url(#a)"/>
+    <text x="494" y="344" font-size="23" font-weight="650" fill="#086755">q 的区间 [0.2 + 0.5ℓ, 0.2 + 0.5u]</text>
+    <text x="902" y="343" font-size="20" fill="#824719">与备选值 0.5 比较</text>
+    <rect x="22" y="365" width="1137" height="53" rx="7" fill="#eaf4f1"/>
+    <text x="42" y="400" font-size="22" fill="#075d4d">全高于 0.5，选新版</text>
+    <text x="345" y="400" font-size="22" fill="#075d4d">全低于 0.5，选备选</text>
+    <text x="663" y="400" font-size="22" fill="#19344a">含 0.5，权衡再探测的收益与代价</text>
+  </g>
+</svg>

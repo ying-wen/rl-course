@@ -1,0 +1,45 @@
+<svg data-crl-visual="v1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-labelledby="title desc">
+<title id="title">平流层气球与在轨装配的两种经验</title>
+<desc id="desc">气球从下层升至上层，实测风只在已访问处取得。机械臂把新杆件接到已经验收的桁架上，当前接触既产生测量也改变结构。两幅图均为问题示意。</desc>
+<defs>
+ <marker id="wind" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path fill="#567482" d="M0 0L10 5 0 10Z"/></marker>
+ <marker id="act" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path fill="#a24e28" d="M0 0L10 5 0 10Z"/></marker>
+ <g id="module" stroke="#435f75" stroke-width="5" fill="none" stroke-linejoin="round"><path d="M0 0h70v65H0z M0 65L70 0M0 0l70 65"/></g>
+</defs>
+<style>text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#193346}.head{font-size:26px;font-weight:650}.lab{font-size:19px;font-weight:600}.cap{font-size:17px}.sub{font-size:16px;fill:#475d69}.wind{fill:none;stroke:#567482;stroke-width:3.5;marker-end:url(#wind)}.new{fill:#a24e28}</style>
+<rect width="1000" height="540" fill="white"/>
+<rect x="12" y="10" width="478" height="420" rx="13" fill="#edf5f8"/><rect x="510" y="10" width="478" height="420" rx="13" fill="#f6f5ef"/>
+<text x="32" y="52" class="head">平流层气球 · 选择风层</text><text x="532" y="52" class="head">在轨机械臂 · 接合新构件</text>
+<text x="32" y="82" class="sub">水平速度随所在风层而变</text><text x="532" y="82" class="sub">固定基座，图示一次接合</text>
+<g>
+ <path class="wind" d="M150 133h-82"/><path class="wind" d="M435 133h-55"/>
+ <path class="wind" d="M58 242h95"/><path class="wind" d="M365 242h72"/>
+ <text x="51" y="175" class="sub">上层风向左</text><text x="52" y="275" class="sub">下层风向右</text>
+ <path d="M163 227 Q203 229 224 226 Q256 224 274 189 Q290 152 302 142" fill="none" stroke="#a24e28" stroke-width="4" marker-end="url(#act)"/>
+ <g fill="#a24e28"><circle cx="184" cy="228" r="4"/><circle cx="224" cy="226" r="4"/><circle cx="273" cy="190" r="4"/></g>
+ <ellipse cx="327" cy="113" rx="19" ry="19" fill="#d88055" stroke="#854125" stroke-width="2"/>
+ <path d="M315 129l8 12h8l8-12" fill="#e9b99a" stroke="#854125" stroke-width="1.8"/><rect x="321" y="141" width="13" height="6" rx="1" fill="#485962"/>
+ <text x="290" y="184" class="cap new">升高采风</text>
+ <path d="M36 310q90-11 128 0t125 0q70-10 169 0" stroke="#a5b5a3" fill="none" stroke-width="2"/>
+ <g stroke="#496c7d" fill="none" stroke-width="2.4"><path d="M215 310l11-35 11 35M218 301h16M222 289h8"/><circle cx="226" cy="273" r="3"/></g>
+ <path d="M147 321h160m-160-5v10m160-10v10" stroke="#496c7d" fill="none" stroke-width="2"/>
+ <text x="121" y="352" class="sub">地面站的水平服务范围（侧视）</text>
+ <text x="33" y="388" class="lab">飞过哪里，决定能测到什么风。</text><text x="33" y="414" class="sub">记录驻留时间、换层代价与电量。</text>
+</g>
+<g>
+ <use href="#module" x="545" y="210"/><use href="#module" x="615" y="210"/>
+ <path d="M685 210h69v65h-69" fill="none" stroke="#9eacaa" stroke-width="2.5" stroke-dasharray="6 5"/>
+ <path d="M686 274l68-64" stroke="#a24e28" stroke-width="6" stroke-linecap="round"/>
+ <g stroke="#213d4d" stroke-width="9" stroke-linecap="round" fill="none"><path d="M941 279l-32-93-70-42-77 51"/></g>
+ <g fill="#dce6e8" stroke="#456170" stroke-width="3"><circle cx="941" cy="279" r="11"/><circle cx="909" cy="186" r="9"/><circle cx="839" cy="144" r="9"/><circle cx="762" cy="195" r="7"/></g>
+ <path d="M758 198l-12 7 2 10m10-16 3 10-6 7" stroke="#334d5b" stroke-width="3" fill="none"/>
+ <path d="M929 290h26l8 11h-42z" fill="#596f78"/>
+ <circle cx="754" cy="210" r="15" stroke="#a24e28" fill="none" stroke-width="2" stroke-dasharray="3 3"/>
+ <text x="538" y="164" class="sub">已连接的两段</text><path d="M596 171v31" stroke="#637781" fill="none"/>
+ <text x="786" y="257" class="cap new">接触与对准</text><path d="M790 240l-23-21" stroke="#a24e28" fill="none"/>
+ <text x="573" y="326" class="sub">验收后的连接在下一工序中保留</text>
+ <text x="532" y="388" class="lab">一次接合，改变下一次接触。</text><text x="532" y="414" class="sub">记录有效连接、恢复时间、损伤与接管。</text>
+</g>
+<path d="M25 456h950" fill="none" stroke="#ccd4d5"/><text x="32" y="489" class="lab">同一段真实时间里，探测和恢复都占用工作机会。</text>
+<text x="32" y="521" class="cap">比较持续更新与强自适应控制器；在相同物理条件的独立副本中，再检验先前知识带来的收益。</text>
+</svg>

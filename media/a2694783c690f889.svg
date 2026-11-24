@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="506" viewBox="0 0 1360 506" role="img" aria-labelledby="title desc" lang="zh">
+  <title id="title">历史中的区别怎样改变下一次发现与练习</title>
+  <desc id="desc">上半部是解析例。两类历史在行动前都给出相同旧状态，过去的圆或菱形给出区别 X。假设后来在两类可比起点执行同一探测，首达事件的条件概率分别为四分之一、四分之三。命中得一分，另一行动确得半分，两者等时且续值相同，因此两组应选不同的行动。下半部是一条真实经验流。由旧片段提出问题和子目标，本次抽中练习。技能交回的样本可用于拟合后果模型。在同一快照下比较遮去及读入新模型的规划排序，实际使用读入后的排序，选中的技能逐步发出原始动作。到共同截止的主奖励包括练习阶段，给先前的生成和分配选择提供更新样本。灰色虚线画的是未执行的选择。</desc>
+  <defs>
+    <marker id="teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#086975"/></marker>
+    <marker id="amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#935618"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC","Heiti SC",sans-serif;fill:#192f38}
+      .head{font-size:30px;font-weight:640}.body{font-size:25px}.small{font-size:23px}
+      .ink{fill:#192f38}.teal{fill:#086975}.gray{fill:#52666e}.amber{fill:#935618}
+      .wire{fill:none;stroke:#086975;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+      .thin{fill:none;stroke:#789097;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+      .ghost{fill:none;stroke:#829398;stroke-width:2.8;stroke-linecap:round;stroke-dasharray:7 7}
+      .credit{fill:none;stroke:#935618;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="1360" height="506" fill="white"/>
+  <!-- A binary feature is available before action; a frozen old summary aliases it. -->
+  <text x="20" y="38" class="head">行动前，两类历史共用旧状态</text>
+  <text x="25" y="96" class="body">X = 0</text><text x="25" y="150" class="body">X = 1</text>
+  <g class="thin"><path d="M121 86H252M121 140H252M252 86C274 86 279 114 305 114M252 140C274 140 279 114 305 114"/></g>
+  <g fill="#73858a"><circle cx="128" cy="86" r="6"/><circle cx="236" cy="86" r="6"/><circle cx="128" cy="140" r="6"/><circle cx="236" cy="140" r="6"/></g>
+  <circle cx="182" cy="86" r="11" fill="white" stroke="#086975" stroke-width="4"/>
+  <path d="M182 126 196 140 182 154 168 140Z" fill="#086975"/>
+  <circle cx="326" cy="114" r="22" fill="#ebf3f3" stroke="#086975" stroke-width="2.5"/>
+  <text x="326" y="122" class="body teal" text-anchor="middle" font-style="italic">z</text>
+  <!-- Conditional probabilities are stipulated for an analytic example, not streamed observations. -->
+  <path d="M421 54V166M858 54V166" stroke="#d8e2e2" stroke-width="2"/>
+  <text x="449" y="38" class="head">同一探测 κ 下的首达概率</text>
+  <text x="450" y="96" class="body">X = 0</text><text x="450" y="150" class="body">X = 1</text>
+  <g stroke-linecap="round" stroke-width="12">
+    <path d="M563 86H735M563 140H735" stroke="#e3eeee"/>
+    <path d="M563 86H606M563 140H692" stroke="#086975"/>
+  </g>
+  <text x="758" y="96" class="body teal">1/4</text><text x="758" y="150" class="body teal">3/4</text>
+  <text x="887" y="38" class="head">这一区别会改变选择吗？</text>
+  <text x="888" y="96" class="body">1/4 &lt; 1/2</text><path d="M1023 87H1072" class="wire" marker-end="url(#teal)"/>
+  <text x="1094" y="96" class="body teal">选行动 a</text>
+  <text x="888" y="150" class="body">3/4 &gt; 1/2</text><path d="M1023 141H1072" class="wire" marker-end="url(#teal)"/>
+  <text x="1094" y="150" class="body teal">选探测 κ</text>
+  <text x="20" y="200" class="small gray">解析例中，κ 在期限内首达 E 得 1，否则得 0。行动 a 确得 1/2。两项行动用时和续值相同。</text>
+  <path d="M20 222H1335" stroke="#a9bcbc" stroke-width="2"/>
+  <!-- One option call and one later plan are realized on the primitive clock. -->
+  <text x="20" y="260" class="head">沿一次真实交互展开更新规则 U</text>
+  <path d="M926 250H969" class="wire"/><text x="982" y="258" class="small gray">实际经过</text>
+  <path d="M1125 250H1167" class="ghost"/><text x="1180" y="258" class="small gray">未选分支</text>
+  <text x="22" y="311" class="body">从旧片段提出</text><text x="22" y="344" class="body">GVF 与子目标</text>
+  <text x="232" y="311" class="body">按概率分配</text>
+  <path d="M42 367H299" class="wire" marker-end="url(#teal)"/>
+  <circle cx="52" cy="367" r="7" fill="#086975"/>
+  <circle cx="310" cy="367" r="9" fill="white" stroke="#086975" stroke-width="3.5"/>
+  <path d="M319 367H585" class="wire" marker-end="url(#teal)"/>
+  <path d="M315 372 345 399H385" class="ghost"/><text x="398" y="407" class="small gray">暂缓</text>
+  <text x="363" y="345" class="body teal">练习技能 o</text>
+  <path d="M400 360V374M440 360V374M480 360V374M520 360V374" stroke="#086975" stroke-width="2.5"/>
+  <circle cx="605" cy="367" r="9" fill="#086975"/>
+  <text x="607" y="311" class="body" text-anchor="middle">技能交回</text>
+  <text x="640" y="344" class="small gray" text-anchor="middle">主奖励和、步数、停点</text>
+  <path d="M619 367H804" class="wire" marker-end="url(#teal)"/>
+  <text x="721" y="401" class="small teal" text-anchor="middle">拟合后果模型</text>
+  <text x="815" y="311" class="body">同一快照比较排序</text>
+  <circle cx="823" cy="367" r="8" fill="white" stroke="#086975" stroke-width="3.5"/>
+  <path d="M831 364 858 337H898" class="ghost"/>
+  <text x="910" y="345" class="small gray">遮去模型，a 优先</text>
+  <path d="M832 367H1126" class="wire" marker-end="url(#teal)"/>
+  <text x="865" y="401" class="small teal">读入模型，o 优先</text>
+  <text x="1155" y="311" class="body">执行 o</text><text x="1155" y="344" class="small gray">逐步取得主奖励</text>
+  <path d="M1139 367H1333" class="wire"/>
+  <g fill="#086975"><circle cx="1165" cy="367" r="5"/><circle cx="1201" cy="367" r="5"/><circle cx="1237" cy="367" r="5"/><circle cx="1273" cy="367" r="5"/></g>
+  <path d="M1333 354V379" stroke="#192f38" stroke-width="3.3"/>
+  <text x="1334" y="406" text-anchor="end" class="small gray">共同截止</text>
+  <!-- This arrow carries an update to future distributions, never information into past choices. -->
+  <path d="M1333 418V461H55V391" class="credit" marker-end="url(#amber)"/>
+  <path d="M310 461V391" class="credit" marker-end="url(#amber)"/>
+  <rect x="342" y="442" width="754" height="40" fill="white"/>
+  <text x="719" y="470" text-anchor="middle" class="body amber">用从选择起实收的主回报，更新下次生成和练习的概率</text>
+</svg>

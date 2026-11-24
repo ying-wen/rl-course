@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="556" viewBox="0 0 1360 556" role="img" aria-labelledby="title description" lang="zh-CN">
+  <title id="title">从一段交互经验构造预测问题</title>
+  <desc id="description">按原始时间先后，过去的观测为 u，在起点执行 a，收到中间观测 v 和奖励，再执行 b，收到观测 w 和新的奖励。生成器读取起点以前的窗口定义历史特征 X，把动作和中间观测组合成策略 κ，把后来的 w 定义为首次命中事件。新问题 q 在首次命中计一，命中或调用结束时不再延续。原有片段只用于生成问题。图底区分设计者给出的接口、语法与预算，旧经验提供的符号和动作，以及由后来的主回报更新的生成与练习概率。</desc>
+  <defs>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC","Heiti SC",sans-serif;fill:#192f38}
+      .heading{font-size:28px;font-weight:650}
+      .body{font-size:25px}
+      .small{font-size:23px}
+      .symbol{font-family:"STIX Two Text","Times New Roman",serif;font-size:31px;font-style:italic}
+      .teal{fill:#086975}.amber{fill:#935618}.muted{fill:#52666e}
+      .wire,.old,.event,.rule{fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .old{stroke:#71858c;stroke-width:3}
+      .wire{stroke:#086975;stroke-width:3.6}
+      .event{stroke:#935618;stroke-width:3.6}
+      .rule{stroke:#c7d6d8;stroke-width:2}
+    </style>
+    <marker id="teal-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.3" markerHeight="4.3" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#086975"/></marker>
+    <marker id="gray-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.3" markerHeight="4.3" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#71858c"/></marker>
+  </defs>
+  <rect width="1360" height="556" fill="white"/>
+  <!-- The cut is immediately before a. Its observation is already available. -->
+  <text x="16" y="37" class="heading">旧窗口中的一次交互</text>
+  <text x="302" y="37" class="small muted">候选问题尚未生成</text>
+  <path d="M484 54V183" class="old" stroke-dasharray="3 7" opacity=".65"/>
+  <path d="M65 110H126" class="old" stroke-dasharray="4 7"/>
+  <path d="M162 110H394" class="old" marker-end="url(#gray-arrow)"/>
+  <path d="M433 110H771" class="wire" marker-end="url(#teal-arrow)"/>
+  <path d="M813 110H1172" class="wire" marker-end="url(#teal-arrow)"/>
+  <path d="M1218 110H1316" class="old" stroke-dasharray="4 7"/>
+  <g fill="white" stroke="#086975" stroke-width="3.6">
+    <circle cx="146" cy="110" r="13"/>
+    <circle cx="793" cy="110" r="13"/>
+  </g>
+  <circle cx="415" cy="110" r="12" fill="white" stroke="#71858c" stroke-width="3.4"/>
+  <path d="M1196 94 1212 110 1196 126 1180 110Z" fill="#fff5e6" stroke="#935618" stroke-width="3.6"/>
+  <g text-anchor="middle">
+    <text x="146" y="82" class="symbol teal">u</text>
+    <text x="415" y="82" class="body">起点观测</text>
+    <text x="620" y="96" class="body teal">动作 <tspan class="symbol teal">a</tspan></text>
+    <text x="793" y="82" class="symbol teal">v</text>
+    <text x="995" y="96" class="body teal">动作 <tspan class="symbol teal">b</tspan></text>
+    <text x="1196" y="82" class="symbol amber">w</text>
+    <text x="146" y="160" class="small muted">较早的观测</text>
+    <text x="500" y="160" class="small muted" text-anchor="start">行动前切分</text>
+    <text x="793" y="160" class="small muted">同时收到 Rₜ₊₁</text>
+    <text x="1196" y="160" class="small muted">同时收到 Rₜ₊₂</text>
+  </g>
+  <path d="M18 196H1342" class="rule"/>
+  <!-- Read one past-window predicate, an executable branch, and one later label from the same sample. -->
+  <path d="M334 222V365M910 222V365" class="rule"/>
+  <text x="23" y="244" class="heading teal">从起点向前读</text>
+  <text x="23" y="298" class="body">过去窗口内见过 <tspan class="symbol teal">u</tspan>？</text>
+  <text x="23" y="345" class="small muted">把是或否记作 X。</text>
+  <text x="369" y="244" class="heading teal">把行动编成可重试的策略 κ</text>
+  <text x="371" y="310" class="body">发 <tspan class="symbol teal">a</tspan></text>
+  <path d="M435 302H473" class="wire" marker-end="url(#teal-arrow)"/>
+  <path d="M548 272 609 302 548 332 487 302Z" fill="#edf5f4" stroke="#086975" stroke-width="2.8"/>
+  <text x="548" y="310" class="small" text-anchor="middle">见 <tspan font-style="italic">v</tspan>？</text>
+  <path d="M610 302H677" class="wire" marker-end="url(#teal-arrow)"/>
+  <text x="643" y="291" class="small teal" text-anchor="middle">是</text>
+  <text x="695" y="310" class="body">发 <tspan class="symbol teal">b</tspan> 后交回</text>
+  <path d="M548 333V352H677" class="old" marker-end="url(#gray-arrow)"/>
+  <text x="644" y="343" class="small muted" text-anchor="middle">否</text>
+  <text x="695" y="361" class="body">立即交回</text>
+  <text x="944" y="244" class="heading amber">从随后观测定义事件 E</text>
+  <text x="944" y="298" class="body">调用内首次见 <tspan class="symbol amber">w</tspan>。</text>
+  <text x="944" y="345" class="small muted">交回当步也检查。</text>
+  <path d="M18 391H1342" class="rule"/>
+  <text x="23" y="437" class="heading">q = (κ, C<tspan dy="-10" font-size="17">q</tspan><tspan dy="10">, Γ</tspan><tspan dy="-10" font-size="17">q</tspan><tspan dy="10">)</tspan></text>
+  <text x="235" y="437" class="body"><tspan font-weight="600">C</tspan><tspan dy="-10" font-size="17">q</tspan><tspan dy="10"> 在首次命中时取 1，其余取 0。</tspan></text>
+  <text x="781" y="437" class="body"><tspan font-weight="600">Γ</tspan><tspan dy="-10" font-size="17">q</tspan><tspan dy="10"> 在命中或交回时取 0，其余取 1。</tspan></text>
+  <!-- The entries on the right can change only after the choices and their later return. -->
+  <rect x="16" y="464" width="1328" height="85" rx="3" fill="#edf4f4"/>
+  <path d="M514 478V536M900 478V536" class="rule"/>
+  <text x="31" y="494" class="body" font-weight="650">设计者给定</text>
+  <text x="31" y="532" class="small">信号与动作、匹配和分支语法、窗口与预算</text>
+  <text x="539" y="494" class="body" font-weight="650">从已有经验抽取</text>
+  <text x="539" y="532" class="small">观测 u、v、w 与原始动作 a、b</text>
+  <text x="925" y="494" class="body" font-weight="650">用后续主回报学习</text>
+  <text x="925" y="532" class="small">各组合的抽取概率、分配给练习的概率</text>
+</svg>

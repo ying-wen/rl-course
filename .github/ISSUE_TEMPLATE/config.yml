@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 欢迎贡献（参与指南）
+    url: https://yingwen.io/rl-course/contribute.html
+    about: 源文件在哪里、写作要求、怎样提交 PR
+  - name: 课程阅读站
+    url: https://yingwen.io/rl-course/
+    about: 逐页课件、阅读稿、PDF 与代码

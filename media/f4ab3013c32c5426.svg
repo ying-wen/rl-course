@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="500" viewBox="0 0 1240 500" role="img" lang="zh" aria-labelledby="title description">
+  <title id="title">知识更新与全程控制回报</title>
+  <desc id="description">上半图从同一历史、记忆与反馈分出操作 u 和参照 v。两者遵循同一后续程序，各自通过行动取得经验，计分到同一外部截止点。下半图左边区分已走和未走的路径，中间把两个已见片段组成新的练习，右边让四个读出使用两组记忆。三类操作都可以放在上方的分叉处比较。</desc>
+  <defs>
+    <marker id="arrow-ink" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4.5L0 9Z" fill="#254653"/></marker>
+    <marker id="arrow-teal" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 5.5L0 11Z" fill="#096b76"/></marker>
+    <marker id="arrow-umber" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 5.5L0 11Z" fill="#966525"/></marker>
+    <style>
+      text { font-family: "PingFang SC","Noto Sans CJK SC","Microsoft Yahei",sans-serif; fill: #1d3741; }
+      .h { font-weight: 650; font-size: 28px; }
+      .s { font-size: 24px; }
+      .v { font-family: Georgia,"Times New Roman",serif; font-style: italic; }
+      .teal { fill: #096b76; }
+      .umber { fill: #845815; }
+      .muted { fill: #496369; }
+      .trace { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .route { stroke-width: 4; }
+    </style>
+  </defs>
+  <rect width="1240" height="500" fill="white"/>
+  <g id="comparison">
+    <text class="h" x="20" y="49">24.2　共同起点</text>
+    <text class="h" x="514" y="49">按同一程序继续行动和学习</text>
+    <text class="s muted" x="20" y="88">当前历史、记忆与预算</text>
+    <text class="s" x="1215" y="49" text-anchor="end" font-weight="650">24.5　全程评价</text>
+    <path d="M35 158H286" class="trace route" stroke="#254653"/>
+    <g fill="#80959a"><circle cx="58" cy="158" r="5"/><circle cx="127" cy="158" r="5"/><circle cx="199" cy="158" r="5"/></g>
+    <text x="281" y="200" text-anchor="middle" class="s">操作前 <tspan class="v">t</tspan></text>
+    <path d="M286 158C354 158 360 105 423 105H1026" class="trace route" stroke="#096b76" marker-end="url(#arrow-teal)"/>
+    <path d="M286 158C354 158 360 206 423 206H1026" class="trace route" stroke="#966525" marker-end="url(#arrow-umber)"/>
+    <circle cx="286" cy="158" r="9" fill="#254653"/>
+    <g fill="#096b76"><circle cx="429" cy="105" r="7"/><circle cx="583" cy="105" r="7"/><circle cx="737" cy="105" r="7"/><circle cx="891" cy="105" r="7"/></g>
+    <g fill="#966525"><rect x="423" y="200" width="12" height="12"/><rect x="577" y="200" width="12" height="12"/><rect x="731" y="200" width="12" height="12"/><rect x="885" y="200" width="12" height="12"/></g>
+    <text x="395" y="86" class="s teal">操作 <tspan class="v">u</tspan></text>
+    <text x="395" y="245" class="s umber">参照 <tspan class="v">v</tspan></text>
+    <text x="744" y="156" class="s muted" text-anchor="middle">每一步各取自己的观测和主奖励</text>
+    <path d="M1039 86V224" stroke="#7f9396" stroke-width="2" stroke-dasharray="5 6"/>
+    <text x="1057" y="133" class="s">同一截止点</text>
+    <text x="1057" y="172" class="s">比较期望</text>
+    <text x="1057" y="204" class="s">总主奖励</text>
+  </g>
+  <g id="operations">
+    <path d="M20 283H1217" stroke="#c1cfd0" stroke-width="1.7"/>
+    <rect x="26" y="268" width="342" height="29" fill="white"/>
+    <text x="34" y="291" class="s" font-weight="650">在这个起点，可以改变什么？</text>
+    <g id="reuse">
+      <text x="22" y="340" class="h">25.1–25.2　复用与探测</text>
+      <path d="M43 396H186" class="trace route" stroke="#096b76" marker-end="url(#arrow-teal)"/>
+      <path d="M95 396Q120 394 149 367H183" class="trace" stroke="#996b39" stroke-width="2.6" stroke-dasharray="6 6"/>
+      <g fill="#096b76"><circle cx="45" cy="396" r="6"/><circle cx="96" cy="396" r="6"/></g>
+      <text x="191" y="375" class="s umber">未见分支</text>
+      <text x="191" y="411" class="s teal">已走路径</text>
+      <text x="22" y="470" class="s">什么能重算，什么要再试？</text>
+    </g>
+    <g id="practice">
+      <text x="426" y="340" class="h">25.5　生成与练习</text>
+      <path d="M451 370H511M451 408H511" class="trace route" stroke="#096b76" marker-end="url(#arrow-teal)"/>
+      <circle cx="449" cy="370" r="6" fill="#096b76"/><circle cx="449" cy="408" r="6" fill="#096b76"/>
+      <text x="526" y="379" class="s v">a</text><text x="526" y="416" class="s v">b</text>
+      <path d="M558 370L580 390L558 408M580 390H611" class="trace" stroke-width="2" stroke="#70868b" marker-end="url(#arrow-ink)"/>
+      <text x="627" y="400" class="s">试练 <tspan class="v">a → b</tspan></text>
+      <text x="426" y="470" class="s">新组合在哪些机会值得练？</text>
+    </g>
+    <g id="group">
+      <text x="830" y="340" class="h">25.4、25.6　写入与分组</text>
+      <text x="832" y="402" class="s">记忆</text>
+      <g class="trace" stroke="#096b76" stroke-width="2.8"><path d="M915 390L949 368M915 390L949 409"/><path d="M1006 390L1040 368M1006 390L1040 409"/></g>
+      <g fill="#096b76"><rect x="907" y="383" width="14" height="14"/><rect x="998" y="383" width="14" height="14"/></g>
+      <g fill="white" stroke="#096b76" stroke-width="2.8"><circle cx="952" cy="366" r="7"/><circle cx="952" cy="412" r="7"/><circle cx="1043" cy="366" r="7"/><circle cx="1043" cy="412" r="7"/></g>
+      <text x="1071" y="402" class="s">读出</text>
+      <text x="830" y="470" class="s">写到哪里，哪些读出共用？</text>
+    </g>
+  </g>
+</svg>

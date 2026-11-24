@@ -1,0 +1,70 @@
+# 强化学习：问题、方法与持续学习智能体
+
+> 温颖的强化学习课程，共 26 章，分表格方法、近似方法与现代智能体、持续强化学习三部分。每章有逐页课件、阅读稿、课件 PDF 和实验代码。
+
+作者：温颖（Ying Wen），上海交通大学人工智能学院。语言：中文。版本：2026-11-24（本站构建日期）。网址：https://yingwen.io/rl-course/
+
+每章的阅读稿是一张 HTML 页，公式以 KaTeX 渲染，页内同时带 MathML 与 TeX 注记。[llms-full.txt](https://yingwen.io/rl-course/llms-full.txt) 是全部阅读稿的纯文本合集，公式保留为 TeX。
+
+## 课程导论
+
+
+## 第一部分 表格方法
+
+
+## 第二部分 近似方法与现代智能体
+
+
+## 第三部分 持续强化学习
+
+
+## 附录
+
+- [第 0 章 课程导论](https://yingwen.io/rl-course/reading/chapter-00.html): 附录。读本课公式时常用的几种推理：分清真值、估计与更新目标，用条件期望把求和变成采样，固定点与一次更新的区别，对数导数技巧，以及全课常用符号。
+
+## 课件与 PDF
+
+- [逐页课件](https://yingwen.io/rl-course/reader/): 全课逐页课件，按章节编排，每页附文字稿，可从任一页跳到对应的阅读稿小节。
+- [全课课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-all-20261124.pdf): 全部章节的课件合订本。
+- [阅读稿 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-reading-20261124.pdf): 全书阅读稿（二十六章与附录）的整本 PDF，含目录与书签。
+
+## 代码
+
+- [全书代码](https://yingwen.io/rl-course/code/rl-yingwen-code-all-20261122.zip): 各章实验代码的 zip 包，每章目录内有 README.md 与 requirements.txt。
+- 每章代码：https://yingwen.io/rl-course/code/rl-yingwen-code-chNN-YYYYMMDD.zip，NN 为两位章号，YYYYMMDD 为打包日期；下载文件统一命名为 rl-yingwen-<内容>-<日期>.<扩展名>，实际文件名见课程首页。
+
+## 引用
+
+- [CITATION.cff](https://yingwen.io/rl-course/CITATION.cff): Citation File Format 1.2.0。
+- [rl-yingwen-citation-20261124.bib](https://yingwen.io/rl-course/rl-yingwen-citation-20261124.bib): BibTeX 条目。
+- 中文引用（GB/T 7714）：温颖. 强化学习：问题、方法与持续学习智能体[EB/OL]. (2026-11-24)[引用日期]. https://yingwen.io/rl-course/.
+
+## Optional
+
+- [全书阅读稿（单页）](https://yingwen.io/rl-course/reading/book.html): 全书阅读稿，把第 1–26 章与附录合在一页，文件很大；分章阅读稿加载更快。
+- [第 1 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch01-20261124.pdf)
+- [第 2 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch02-20261124.pdf)
+- [第 3 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch03-20261124.pdf)
+- [第 4 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch04-20261124.pdf)
+- [第 5 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch05-20261124.pdf)
+- [第 6 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch06-20261124.pdf)
+- [第 7 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch07-20261124.pdf)
+- [第 8 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch08-20261124.pdf)
+- [第 9 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch09-20261124.pdf)
+- [第 10 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch10-20261124.pdf)
+- [第 11 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch11-20261124.pdf)
+- [第 12 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch12-20261124.pdf)
+- [第 13 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch13-20261124.pdf)
+- [第 14 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch14-20261124.pdf)
+- [第 15 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch15-20261124.pdf)
+- [第 16 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch16-20261124.pdf)
+- [第 17 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch17-20261124.pdf)
+- [第 18 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch18-20261124.pdf)
+- [第 19 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch19-20261124.pdf)
+- [第 20 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch20-20261124.pdf)
+- [第 21 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch21-20261124.pdf)
+- [第 22 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch22-20261124.pdf)
+- [第 23 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch23-20261124.pdf)
+- [第 24 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch24-20261124.pdf)
+- [第 25 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch25-20261124.pdf)
+- [第 26 章课件 PDF](https://yingwen.io/rl-course/pdf/rl-yingwen-slides-ch26-20261124.pdf)

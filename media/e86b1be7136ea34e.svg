@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="465" viewBox="0 0 920 465" role="img" aria-labelledby="title description">
+  <title id="title">规划读取技能模型时，重估模型能多带来多少回报？</title>
+  <desc id="description">四组从同一初始技能模型出发，各自行动 T 个原始步。行从沿用初始模型变为用本组经验重估，列分别禁止和允许规划读取模型。两列内向下比较得到重估的边际增益 J10 减 J00 与 J11 减 J01。右列增益减左列增益是待估计的交互项。整套学习器的净收益还需与所选参照组比较。</desc>
+  <defs>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1 L8 5 L1 9" fill="none" stroke="#45636d" stroke-width="1.8"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1 L8 5 L1 9" fill="none" stroke="#006a62" stroke-width="1.8"/>
+    </marker>
+  </defs>
+  <rect width="920" height="465" fill="#fcfcf8"/>
+  <g font-family="PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, sans-serif" fill="#172f3a">
+    <text x="30" y="47" font-size="31" font-weight="650">规划读取技能模型时，重估模型能多带来多少回报？</text>
+    <text x="31" y="85" font-size="20" fill="#405c65">四组从同一初始模型出发，各自行动 T 个原始步。每格记该组的期望累计主奖励。</text>
+
+    <rect x="285" y="108" width="288" height="210" rx="6" fill="#f0f3f3"/>
+    <rect x="588" y="108" width="300" height="210" rx="6" fill="#e8f3ef"/>
+    <text x="429" y="142" text-anchor="middle" font-size="23" font-weight="600" fill="#36545f">规划不读取模型</text>
+    <text x="738" y="142" text-anchor="middle" font-size="23" font-weight="600" fill="#005d56">规划读取模型</text>
+
+    <text x="30" y="191" font-size="23" font-weight="550">沿用初始模型</text>
+    <text x="30" y="300" font-size="23" font-weight="550">用本组经验重估模型</text>
+    <g font-family="Georgia, Times New Roman, serif" font-size="32" font-style="italic">
+      <text x="354" y="193" fill="#284855">J₀₀</text>
+      <text x="657" y="193" fill="#005d56">J₀₁</text>
+      <text x="354" y="302" fill="#284855">J₁₀</text>
+      <text x="657" y="302" fill="#005d56">J₁₁</text>
+    </g>
+    <path d="M375 205 V266" fill="none" stroke="#45636d" stroke-width="2.5" marker-end="url(#arrow-slate)"/>
+    <path d="M678 205 V266" fill="none" stroke="#006a62" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+    <g font-family="Georgia, Times New Roman, serif" font-size="27" font-style="italic">
+      <text x="399" y="244" fill="#36545f">J₁₀ − J₀₀</text>
+      <text x="702" y="244" fill="#005d56">J₁₁ − J₀₁</text>
+    </g>
+
+    <line x1="30" y1="341" x2="888" y2="341" stroke="#becbc9" stroke-width="1.5"/>
+    <text x="30" y="390" font-size="25" font-weight="600">待估计的交互项</text>
+    <text x="302" y="391" font-family="Georgia, Times New Roman, serif" font-size="34" font-style="italic">
+      <tspan fill="#005d56">(J₁₁ − J₀₁)</tspan><tspan fill="#172f3a"> − </tspan><tspan fill="#36545f">(J₁₀ − J₀₀)</tspan>
+    </text>
+    <text x="30" y="435" font-size="20" fill="#405c65">右列增益减去左列增益。整套学习器的净收益另与同预算的参照学习器比较。</text>
+  </g>
+</svg>

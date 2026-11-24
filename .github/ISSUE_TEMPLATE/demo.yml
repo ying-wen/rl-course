@@ -1,0 +1,32 @@
+name: 交互演示问题
+description: 阅读稿里的交互演示打不开、算得不对，或在某些设备与主题下显示不全
+title: "[演示] 第 N 章 演示名："
+labels: ["交互演示"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: 演示所在页面与标题
+      description: 页面网址，以及演示框左上角“交互演示”后面的标题
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 现象
+      description: 做了哪些操作、看到了什么、期望看到什么；算错的请贴出面板里的数
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 浏览器与设备
+      placeholder: 例如 Safari 18 / iPhone，亮色主题
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: 控制台报错（可选）
+      description: 桌面浏览器按 F12 打开开发者工具，把 Console 里的红字贴过来
+      render: text

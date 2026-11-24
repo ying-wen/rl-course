@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">一次技能调用的时间线与对象分工</title>
+  <desc id="desc">上半部分沿原始时间轴画出一次调用至终止的执行：高层策略在启动集内选择技能后不再作选择；技能的内部策略逐个原始步选动作，每到达一个新状态由终止函数决定继续还是交回；内部奖励只用来训练技能，主奖励逐步累计为段奖励、时长和停点，并在交回后继续流动。下半部分列出子任务、技能和高层使用三者中哪些是给定的、哪些是学得的。</desc>
+  <defs>
+    <marker id="teal-head" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#08676e"/></marker>
+    <marker id="ochre-head" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#955719"/></marker>
+    <marker id="grey-head" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#8a9a9e"/></marker>
+    <marker id="ink-head" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#183941"/></marker>
+    <style>
+      text { font-family: "PingFang SC","Noto Sans CJK SC",sans-serif; fill: #183941; }
+      .lane { font-size: 21px; font-weight: 650; }
+      .sub { font-size: 15px; fill: #5b6f74; }
+      .body { font-size: 17px; }
+      .small { font-size: 15px; }
+      .teal { fill: #08676e; } .ochre { fill: #885119; } .grey { fill: #7c8c90; }
+      .sym { font-family: Georgia,"Times New Roman",serif; font-style: italic; }
+      .boxt { font-size: 20px; font-weight: 650; }
+    </style>
+  </defs>
+  <rect width="1200" height="600" fill="#fff"/>
+
+  <!-- column guides at primitive step boundaries -->
+  <g stroke="#d9e3e4" stroke-width="1.5" stroke-dasharray="5 6">
+    <line x1="300" y1="40" x2="300" y2="372"/>
+    <line x1="500" y1="40" x2="500" y2="372"/>
+    <line x1="700" y1="40" x2="700" y2="372"/>
+    <line x1="900" y1="40" x2="900" y2="372"/>
+    <line x1="1100" y1="40" x2="1100" y2="372"/>
+  </g>
+  <g class="small grey" text-anchor="middle">
+    <text x="300" y="30"><tspan class="sym">t</tspan></text>
+    <text x="500" y="30"><tspan class="sym">t</tspan>+1</text>
+    <text x="700" y="30"><tspan class="sym">t</tspan>+2</text>
+    <text x="900" y="30"><tspan class="sym">t</tspan>+3 = <tspan class="sym">t</tspan>+<tspan class="sym">τ</tspan></text>
+    <text x="1100" y="30"><tspan class="sym">t</tspan>+4</text>
+  </g>
+
+  <!-- lane labels -->
+  <text x="20" y="78" class="lane ochre">高层策略 <tspan class="sym">μ</tspan></text>
+  <text x="20" y="100" class="sub">只在交回时选择</text>
+  <text x="20" y="168" class="lane teal">技能 <tspan class="sym">o</tspan> 执行</text>
+  <text x="20" y="190" class="sub">每个原始步由 <tspan class="sym">π</tspan><tspan class="sym" dy="4" font-size="12">o</tspan><tspan dy="-4"> 选动作</tspan></text>
+  <text x="20" y="282" class="lane">内部奖励</text>
+  <text x="20" y="304" class="sub">只用来训练 <tspan class="sym">π</tspan><tspan class="sym" dy="4" font-size="12">o</tspan><tspan dy="-4">、</tspan><tspan class="sym">β</tspan><tspan class="sym" dy="4" font-size="12">o</tspan></text>
+  <text x="20" y="350" class="lane">主奖励</text>
+  <text x="20" y="372" class="sub">高层与全程计分</text>
+
+  <!-- high-level lane -->
+  <path d="M300 76H900" stroke="#955719" stroke-width="3" stroke-dasharray="9 7" fill="none"/>
+  <rect x="510" y="62" width="180" height="28" fill="#fff"/>
+  <text x="600" y="83" text-anchor="middle" class="body ochre">等待，不作选择</text>
+  <path d="M300 62L314 76L300 90L286 76Z" fill="#955719"/>
+  <path d="M900 62L914 76L900 90L886 76Z" fill="#955719"/>
+  <text x="318" y="112" class="small ochre">在 <tspan class="sym">z</tspan>∈<tspan class="sym">I</tspan><tspan class="sym" dy="4" font-size="12">o</tspan><tspan dy="-4"> 处选中 </tspan><tspan class="sym">o</tspan></text>
+  <text x="918" y="112" class="small ochre">从交回状态重选 <tspan class="sym">o</tspan>′</text>
+  <path d="M900 76H1086" stroke="#955719" stroke-width="3" fill="none" marker-end="url(#ochre-head)"/>
+
+  <!-- execution lane -->
+  <g fill="none" stroke="#08676e" stroke-width="3">
+    <path d="M308 165H488" marker-end="url(#teal-head)"/>
+    <path d="M508 165H688" marker-end="url(#teal-head)"/>
+    <path d="M708 165H888" marker-end="url(#teal-head)"/>
+  </g>
+  <path d="M908 165H1088" fill="none" stroke="#8a9a9e" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#grey-head)"/>
+  <g fill="#08676e">
+    <circle cx="300" cy="165" r="7"/><circle cx="500" cy="165" r="7"/><circle cx="700" cy="165" r="7"/><circle cx="900" cy="165" r="7"/>
+  </g>
+  <circle cx="1100" cy="165" r="7" fill="#8a9a9e"/>
+  <g class="small teal" text-anchor="middle">
+    <text x="400" y="152"><tspan class="sym">a</tspan> ~ <tspan class="sym">π</tspan><tspan class="sym" dy="4" font-size="12">o</tspan><tspan dy="-4">(·|</tspan><tspan class="sym">z</tspan>)</text>
+    <text x="600" y="152"><tspan class="sym">a</tspan> ~ <tspan class="sym">π</tspan><tspan class="sym" dy="4" font-size="12">o</tspan><tspan dy="-4">(·|</tspan><tspan class="sym">z</tspan>)</text>
+    <text x="800" y="152"><tspan class="sym">a</tspan> ~ <tspan class="sym">π</tspan><tspan class="sym" dy="4" font-size="12">o</tspan><tspan dy="-4">(·|</tspan><tspan class="sym">z</tspan>)</text>
+  </g>
+  <text x="1000" y="152" text-anchor="middle" class="small grey"><tspan class="sym">o</tspan>′ 的第一步</text>
+  <!-- termination checks -->
+  <g>
+    <rect x="450" y="190" width="100" height="50" rx="7" fill="#eff6f5" stroke="#7aa9a8" stroke-width="1.6"/>
+    <text x="500" y="211" text-anchor="middle" class="small"><tspan class="sym">β</tspan><tspan class="sym" dy="4" font-size="12">o</tspan><tspan dy="-4">(</tspan><tspan class="sym">z</tspan>′)</text>
+    <text x="500" y="232" text-anchor="middle" class="small teal">继续</text>
+    <rect x="650" y="190" width="100" height="50" rx="7" fill="#eff6f5" stroke="#7aa9a8" stroke-width="1.6"/>
+    <text x="700" y="211" text-anchor="middle" class="small"><tspan class="sym">β</tspan><tspan class="sym" dy="4" font-size="12">o</tspan><tspan dy="-4">(</tspan><tspan class="sym">z</tspan>′)</text>
+    <text x="700" y="232" text-anchor="middle" class="small teal">继续</text>
+    <rect x="850" y="190" width="100" height="50" rx="7" fill="#f8f0e4" stroke="#c49a63" stroke-width="1.6"/>
+    <text x="900" y="211" text-anchor="middle" class="small"><tspan class="sym">β</tspan><tspan class="sym" dy="4" font-size="12">o</tspan><tspan dy="-4">(</tspan><tspan class="sym">z</tspan>′)</text>
+    <text x="900" y="232" text-anchor="middle" class="small ochre">交回</text>
+  </g>
+  <path d="M900 188V98" fill="none" stroke="#955719" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#ochre-head)"/>
+
+  <!-- internal reward lane -->
+  <g class="body" text-anchor="middle">
+    <text x="400" y="290"><tspan class="sym">c</tspan><tspan class="sym" dy="5" font-size="13">t</tspan><tspan font-size="13">+1</tspan></text>
+    <text x="600" y="290"><tspan class="sym">c</tspan><tspan class="sym" dy="5" font-size="13">t</tspan><tspan font-size="13">+2</tspan></text>
+    <text x="800" y="290"><tspan class="sym">c</tspan><tspan class="sym" dy="5" font-size="13">t</tspan><tspan font-size="13">+3</tspan></text>
+  </g>
+  <text x="912" y="290" class="small">＋停点价值 <tspan class="sym">c</tspan><tspan dy="4" font-size="12">stop</tspan><tspan dy="-4">(</tspan><tspan class="sym">z</tspan>′)</text>
+  <text x="1100" y="290" text-anchor="middle" class="small grey">本次调用不再计</text>
+
+  <!-- main reward lane -->
+  <g class="body ochre" text-anchor="middle">
+    <text x="400" y="348"><tspan class="sym">R</tspan><tspan class="sym" dy="5" font-size="13">t</tspan><tspan font-size="13">+1</tspan></text>
+    <text x="600" y="348"><tspan class="sym">R</tspan><tspan class="sym" dy="5" font-size="13">t</tspan><tspan font-size="13">+2</tspan></text>
+    <text x="800" y="348"><tspan class="sym">R</tspan><tspan class="sym" dy="5" font-size="13">t</tspan><tspan font-size="13">+3</tspan></text>
+    <text x="1000" y="348"><tspan class="sym">R</tspan><tspan class="sym" dy="5" font-size="13">t</tspan><tspan font-size="13">+4</tspan></text>
+  </g>
+  <path d="M304 362V374H896V362" fill="none" stroke="#955719" stroke-width="2"/>
+  <text x="600" y="398" text-anchor="middle" class="small ochre">累计为段奖励 <tspan class="sym">G</tspan>、时长 <tspan class="sym">τ</tspan> = 3、停点 <tspan class="sym">Z</tspan>′（技能模型的对象，见第 22 章）</text>
+  <text x="1000" y="398" text-anchor="middle" class="small grey" dx="40">主奖励流照常延续</text>
+
+  <!-- bottom: roles -->
+  <line x1="20" y1="420" x2="1180" y2="420" stroke="#d9e3e4" stroke-width="1.5"/>
+  <g>
+    <rect x="20" y="440" width="340" height="140" rx="9" fill="#f8f4ed" stroke="#c49a63" stroke-width="1.8"/>
+    <text x="40" y="472" class="boxt ochre">子任务：规格</text>
+    <text x="40" y="502" class="body">子目标或停点价值 <tspan class="sym">c</tspan><tspan dy="4" font-size="12">stop</tspan><tspan dy="-4">、内部奖励、</tspan></text>
+    <text x="40" y="526" class="body">可用动作、结束条件</text>
+    <text x="40" y="560" class="small grey">设计者给定，或由学习器从经验提出</text>
+  </g>
+  <g>
+    <rect x="430" y="440" width="340" height="140" rx="9" fill="#eff6f5" stroke="#7aa9a8" stroke-width="1.8"/>
+    <text x="450" y="472" class="boxt teal">技能：行为 <tspan class="sym">o</tspan> = (<tspan class="sym">I</tspan><tspan class="sym" dy="4" font-size="13">o</tspan><tspan dy="-4">, </tspan><tspan class="sym">π</tspan><tspan class="sym" dy="4" font-size="13">o</tspan><tspan dy="-4">, </tspan><tspan class="sym">β</tspan><tspan class="sym" dy="4" font-size="13">o</tspan><tspan dy="-4">)</tspan></text>
+    <text x="450" y="502" class="body">启动集、内部策略、终止函数</text>
+    <text x="450" y="526" class="body">每一项可以给定，也可以学习</text>
+    <text x="450" y="560" class="small grey">用内部奖励或主奖励训练</text>
+  </g>
+  <g>
+    <rect x="840" y="440" width="340" height="140" rx="9" fill="#fff" stroke="#183941" stroke-width="1.6"/>
+    <text x="860" y="472" class="boxt">高层使用</text>
+    <text x="860" y="502" class="body"><tspan class="sym">μ</tspan> 按主奖励、时长和停点</text>
+    <text x="860" y="526" class="body">比较可启动的技能</text>
+    <text x="860" y="560" class="small grey">评价只用主奖励与原始步计时</text>
+  </g>
+  <path d="M362 510H420" fill="none" stroke="#183941" stroke-width="2.5" marker-end="url(#ink-head)"/>
+  <text x="391" y="500" text-anchor="middle" class="small">练习</text>
+  <path d="M772 510H830" fill="none" stroke="#183941" stroke-width="2.5" marker-end="url(#ink-head)"/>
+  <text x="801" y="500" text-anchor="middle" class="small">调用</text>
+</svg>

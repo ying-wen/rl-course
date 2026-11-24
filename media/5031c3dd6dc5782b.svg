@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="225" viewBox="0 0 1210 225" role="img" aria-labelledby="title desc" lang="zh">
+  <title id="title">同一笔外部主回报给提议与分配两次选择加权</title>
+  <desc id="desc">实线表示提出候选 c，并选择练习，沿原始环境步得到实收余期主回报 4。虚线表示未选的提议与分配。先前样本给出的两项均值为 3 和 5，这条样本给提议分数的权重为 4 减 3 等于 1，给分配分数的权重为 4 减 5 等于负 1。数值为教学算例。</desc>
+  <defs>
+    <marker id="teal-tip" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#126c67"/></marker>
+    <marker id="gold-tip" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#945a20"/></marker>
+  </defs>
+  <rect width="1210" height="225" fill="white"/>
+  <g font-family="PingFang SC, Noto Sans CJK SC, sans-serif" fill="#18383a">
+    <g font-size="25" font-weight="620">
+      <text x="14" y="32">提议前的样本均值　V̂(I) = 3</text>
+      <text x="410" y="32">候选已知　V̂(I, c) = 5</text>
+      <text x="850" y="32">选后按原始步累计主奖励</text>
+    </g>
+    <g fill="none" stroke="#126c67" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M70 120 C111 120 126 85 175 85 H191" marker-end="url(#teal-tip)"/>
+      <path d="M282 85 H410" marker-end="url(#teal-tip)"/>
+      <path d="M421 85 H536" marker-end="url(#teal-tip)"/>
+      <path d="M608 85 H1160" marker-end="url(#teal-tip)"/>
+    </g>
+    <g fill="none" stroke="#7d8e90" stroke-width="2.2" stroke-dasharray="6 6" stroke-linecap="round">
+      <path d="M70 120 C113 120 130 145 175 145 H191"/>
+      <path d="M418 85 C460 85 475 143 518 143 H536"/>
+    </g>
+    <g fill="#126c67" font-size="24" font-weight="550">
+      <circle cx="67" cy="120" r="7"/><circle cx="418" cy="85" r="7"/>
+      <text x="202" y="93">候选 c</text><text x="547" y="93">练习</text>
+    </g>
+    <g fill="#52666e" font-size="21">
+      <text x="202" y="152">另一候选</text><text x="547" y="150">暂不练</text>
+      <text x="775" y="140">后续控制与学习照常进行</text><text x="1158" y="122">T</text>
+    </g>
+    <g stroke="#126c67" stroke-width="2.5" fill="white">
+      <circle cx="740" cy="85" r="5"/><circle cx="790" cy="85" r="5"/><circle cx="840" cy="85" r="5"/>
+      <circle cx="890" cy="85" r="5"/><circle cx="940" cy="85" r="5"/><circle cx="990" cy="85" r="5"/>
+    </g>
+    <path d="M1155 132 V171 Q1155 182 1143 182 H1076" fill="none" stroke="#945a20" stroke-width="2.6" marker-end="url(#gold-tip)"/>
+    <rect x="6" y="173" width="1050" height="47" rx="6" fill="#fcf2e3"/>
+    <g fill="#704419" font-size="24" font-weight="580">
+      <text x="15" y="205">提议权重　4 − 3 = +1</text><text x="409" y="205">分配权重　4 − 5 = −1</text><text x="852" y="205">实收 Gⱼ = 4</text>
+    </g>
+    <g stroke="#dbc7ab" stroke-width="1.5"><path d="M394 184 V211"/><path d="M836 184 V211"/></g>
+  </g>
+</svg>

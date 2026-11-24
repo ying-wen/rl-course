@@ -1,0 +1,30 @@
+name: 内容建议
+description: 讲得不清楚的地方、缺少的例子或推导、建议补充的文献
+title: "[建议] 第 N 章："
+labels: ["建议"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: 位置
+      description: 网址或章节
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 读到这里时的困难
+      description: 哪一步没看懂、哪里前后对不上、哪个假设没说清
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议
+      description: 想补的例子、推导或换一种讲法；建议引用文献时请写作者、题名、年份
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: 是否愿意自己改
+      options:
+        - label: 我愿意就这一处提交 PR

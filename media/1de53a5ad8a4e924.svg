@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 325" role="img" aria-labelledby="t d">
+<title id="t">能区分两种机制的实验</title><desc id="d">已有观测集中在两种机制预言重合的区域。智能体选择一项干预，两种预言才分开。独立测量若落在两个区间以外，就需要另找解释。图为原理示意，无实测数据。</desc>
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" fill="#536770"/></marker></defs>
+<rect width="760" height="325" fill="#fafaf6" rx="9"/>
+<g font-family="'PingFang SC','Noto Sans CJK SC',sans-serif" fill="#203d43">
+<text x="28" y="38" font-size="25" font-weight="650">什么样的实验能区分两种解释？</text>
+<path d="M80 247V74 M80 247H716" fill="none" stroke="#788c8e" stroke-width="1.75" marker-end="url(#arrow)"/>
+<text x="21" y="93" font-size="15">测量值</text>
+<rect x="91" y="108" width="200" height="122" rx="3" fill="#e6eeeb"/>
+<text x="108" y="135" font-size="16">已做实验的范围</text>
+<path d="M102 210 Q198 194 280 183 Q390 166 479 95" fill="none" stroke="#04675d" stroke-width="4"/>
+<path d="M102 212 Q198 193 280 184 Q370 177 479 215" fill="none" stroke="#b15d32" stroke-width="3" stroke-dasharray="9 5"/>
+<g stroke="#465b61" stroke-width="1.8" fill="#fafaf6"><circle cx="123" cy="207" r="5"/><circle cx="160" cy="198" r="5"/><circle cx="196" cy="194" r="5"/><circle cx="240" cy="190" r="5"/><circle cx="267" cy="184" r="5"/></g>
+<path d="M480 72V246" stroke="#83949b" stroke-dasharray="3 5" stroke-width="1.5"/>
+<g stroke-width="2.5"><g stroke="#04675d"><path d="M480 81v28m-7-28h14m-14 28h14"/><circle cx="480" cy="95" r="4" fill="#04675d"/></g><g stroke="#b15d32"><path d="M480 202v25m-7-25h14m-14 25h14"/><circle cx="480" cy="215" r="4" fill="#b15d32"/></g></g>
+<text x="502" y="100" font-size="16" fill="#04675d">机制甲的预期区间</text><text x="502" y="220" font-size="16" fill="#9a492c">机制乙的预期区间</text>
+<path d="M475 152l10 10m0-10l-10 10" stroke="#243843" stroke-width="2"/><text x="503" y="163" font-size="15">也可能两者均不吻合</text>
+<text x="416" y="273" font-size="16">拟进行的干预</text><text x="620" y="273" font-size="15">干预强度</text>
+<text x="29" y="307" font-size="14" fill="#526469">圆点表示已有观测，竖线段表示两种预言的不确定范围。图为原理示意。</text></g></svg>

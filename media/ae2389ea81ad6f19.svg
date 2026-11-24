@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="532" viewBox="0 0 1320 532" role="img" aria-labelledby="title desc" lang="zh-CN">
+  <title id="title">延迟主回报、分层估值与练习分配</title>
+  <desc id="desc">在发现机会 τ_j，学习器先读信息 I，从 g 提出候选 c，再从 s 选定操作 m。每次新信息出现时保存对应的旧估值。按所选安排行动，累计真实主奖励到共同截止 T，得到 G_j。以同一 G_j 为样本目标更新只读 I、读 I 和 c、读 I、c 和 m 的三个预报；未执行分支没有本次回报。提议和分配分别用相应选择前的基线衡量样本。以后复查时，比较从新起点再练与停练保留的价值，仅在可比分支有经验支持时作判断。</desc>
+  <defs>
+    <style>
+      text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#192f38}
+      .h{font-size:29px;font-weight:650}
+      .b{font-size:26px}.k{font-size:25px;font-weight:600}
+      .s{font-size:23px}.m{font:italic 29px "Times New Roman",serif}
+      .teal{fill:#086975}.brown{fill:#8c511c}.muted{fill:#52666e}
+      .line,.path,.rule,.other{fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .line{stroke:#086975;stroke-width:3.7}.path{stroke:#8c511c;stroke-width:3.7}
+      .rule{stroke:#c8d5d8;stroke-width:1.7}.other{stroke:#74848a;stroke-width:2.5;stroke-dasharray:5 6}
+    </style>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#086975"/></marker>
+    <marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#8c511c"/></marker>
+  </defs>
+  <rect width="1320" height="532" fill="white"/>
+  <!-- Gathering a single on-policy realization. Symbols below points are the cached, pre-return estimates. -->
+  <text x="18" y="35" class="h teal">发现机会 τⱼ 的三次估值</text>
+  <text x="540" y="34" class="s muted">依次保存旧估值，同一原始时刻的两次抽样之间没有主奖励。</text>
+  <g text-anchor="middle">
+    <text x="97" y="94" class="k">当前信息 I</text>
+    <text x="369" y="94" class="k">候选 c</text>
+    <text x="650" y="94" class="k">所选操作 m</text>
+    <text x="224" y="105" class="s teal">g 提议</text>
+    <text x="508" y="105" class="s teal">s 分配</text>
+    <text x="984" y="96" class="k brown">按所选安排累计主奖励</text>
+    <text x="1225" y="94" class="k brown">截止 T</text>
+  </g>
+  <path d="M108 121H353" class="line" marker-end="url(#ar)"/><path d="M381 121H633" class="line" marker-end="url(#ar)"/>
+  <path d="M664 121H1208" class="path" marker-end="url(#am)"/>
+  <g fill="#086975"><circle cx="97" cy="121" r="7"/><circle cx="370" cy="121" r="7"/><circle cx="651" cy="121" r="7"/></g>
+  <g fill="#8c511c"><circle cx="844" cy="121" r="5"/><circle cx="937" cy="121" r="5"/><circle cx="1030" cy="121" r="5"/><circle cx="1123" cy="121" r="5"/><circle cx="1225" cy="121" r="7"/></g>
+  <g text-anchor="middle">
+    <text x="97" y="164" class="m teal">V̂(I)</text><text x="370" y="164" class="m teal">V̂(I,c)</text><text x="651" y="164" class="m teal">Q̂(I,c,m)</text>
+    <text x="1028" y="164" class="s brown">从 τⱼ 后的第一笔 R 到 R<tspan dy="5" font-size="15">T</tspan><tspan dy="-5">，求和得 Gⱼ</tspan></text>
+  </g>
+  <path d="M18 192H1302" class="rule"/>
+  <!-- One sample target, three different information sets. The other allocation has no observed return. -->
+  <text x="18" y="234" class="h teal">用已收到的 Gⱼ 更新估值</text>
+  <text x="477" y="232" class="s muted">旧样本中另一候选得 0、2，c 练习得 2，停练得 8。本次 c 练习得 4。</text>
+  <g text-anchor="middle">
+    <text x="161" y="287" class="b"><tspan class="m">V̂(I)</tspan>：3 → 16/5</text>
+    <text x="514" y="287" class="b"><tspan class="m">V̂(I,c)</tspan>：5 → 14/3</text>
+    <text x="904" y="287" class="b"><tspan class="m">Q̂(I,c,</tspan>练习<tspan class="m">)</tspan>：2 → 3</text>
+  </g>
+  <path d="M902 302V319H952" class="other"/>
+  <text x="967" y="328" class="s muted">停练未执行，估值仍为 8。</text>
+  <path d="M18 350H1302" class="rule"/>
+  <!-- Later decisions use the right baselines, or a supported branch comparison at a fresh start. -->
+  <text x="18" y="393" class="h teal">用抽样前的估值分配信用</text>
+  <text x="19" y="447" class="b"><tspan font-weight="650">提议 g：</tspan>用 <tspan class="m">Gⱼ − V̂(I)</tspan> <tspan class="m">= +1</tspan> 给 <tspan class="m">∇ log g(c | I)</tspan> 加权。</text>
+  <text x="19" y="497" class="b"><tspan font-weight="650">分配 s：</tspan>用 <tspan class="m">Gⱼ − V̂(I,c)</tspan> <tspan class="m">= −1</tspan> 给 <tspan class="m">∇ log s(m | I,c)</tspan> 加权。</text>
+  <path d="M697 373V510" class="rule"/>
+  <text x="723" y="393" class="h brown">下次在 I′ 复查同一候选</text>
+  <text x="723" y="447" class="b">比较 <tspan class="m">Q̂(I′,c,</tspan>再练<tspan class="m">) − Q̂(I′,c,</tspan>停练<tspan class="m">)</tspan>。</text>
+  <text x="723" y="497" class="s muted">停练保留技能。比较缺少样本时可另行试用。</text>
+</svg>

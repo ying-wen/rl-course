@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="520" viewBox="0 0 1240 520" role="img" aria-labelledby="title desc">
+<title id="title">恒左策略下仓库配送的状态循环与差分价值</title>
+<desc id="desc">示意图。仓库状态按看到的指示分为 D_L 和 D_R，各走一步到路口 J_L、J_R。恒左策略在 J_L 向左直达 B 得 4，在 J_R 向左进入 W，再经 C 回到 B，途中 W 到 C 得 1。B 回仓后左右指示各以二分之一出现。各状态下方标出 h_π：D_L 为 11/4，J_L 为 27/8，D_R 为 −3/2，J_R 为 −7/8，W 为 −1/4，C 为 −5/8，B 为 0。虚线是 J_R 改向右直达 B 得 4 的备选动作。右侧方框列出奖励率 5/8，以及 J_R 处向左与向右的差分动作价值 −7/8 与 27/8。</desc>
+<defs>
+<marker id="ih" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#183941"/></marker>
+<marker id="oh" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#955719"/></marker>
+<marker id="th" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6.5L1 12Z" fill="#08676e"/></marker>
+<style>
+text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#183941;}
+.hd{font-size:22px;font-weight:650;}
+.n{font-size:22px;font-family:Georgia,"Times New Roman",serif;font-style:italic;}
+.e{font-size:17px;}
+.h{font-size:18px;fill:#955719;font-weight:600;}
+.p{font-size:18px;}
+.m{font-family:Georgia,"Times New Roman",serif;font-style:italic;}
+.sub{font-size:15px;fill:#4d6268;}
+</style></defs>
+<rect width="1240" height="520" fill="#ffffff"/>
+<text x="40" y="40" class="hd">恒左策略下的仓库循环（实线）与各状态的差分价值 <tspan class="m">h</tspan><tspan class="m" font-size="15" dy="5">π</tspan></text>
+
+<!-- solid transitions -->
+<line x1="144" y1="140" x2="292" y2="140" stroke="#183941" stroke-width="2.2" marker-end="url(#ih)"/>
+<text x="218" y="130" text-anchor="middle" class="e">0</text>
+<line x1="144" y1="340" x2="292" y2="340" stroke="#183941" stroke-width="2.2" marker-end="url(#ih)"/>
+<text x="218" y="330" text-anchor="middle" class="e">0</text>
+<line x1="362" y1="150" x2="866" y2="232" stroke="#08676e" stroke-width="2.6" marker-end="url(#th)"/>
+<text x="560" y="160" text-anchor="middle" class="e" fill="#08676e" style="fill:#08676e">向左　+4</text>
+<line x1="364" y1="340" x2="502" y2="340" stroke="#183941" stroke-width="2.2" marker-end="url(#ih)"/>
+<text x="433" y="330" text-anchor="middle" class="e">向左　0</text>
+<line x1="574" y1="340" x2="712" y2="340" stroke="#183941" stroke-width="2.2" marker-end="url(#ih)"/>
+<text x="643" y="330" text-anchor="middle" class="e">+1</text>
+<line x1="776" y1="318" x2="872" y2="262" stroke="#183941" stroke-width="2.2" marker-end="url(#ih)"/>
+<text x="840" y="312" class="e">0</text>
+
+<!-- return loop -->
+<path d="M900 284 L900 462 L50 462 L50 140 L72 140" fill="none" stroke="#4d6268" stroke-width="2" marker-end="url(#ih)"/>
+<path d="M50 340 L72 340" fill="none" stroke="#4d6268" stroke-width="2" marker-end="url(#ih)"/>
+<text x="475" y="490" text-anchor="middle" class="sub">回仓：新指示为左、右各以 1/2 出现</text>
+
+<!-- dashed alternative -->
+<path d="M352 314 C 450 250, 720 236, 864 244" fill="none" stroke="#955719" stroke-width="2.2" stroke-dasharray="8 6" marker-end="url(#oh)"/>
+<text x="610" y="232" text-anchor="middle" class="e" style="fill:#955719">备选：在 <tspan class="m">J</tspan><tspan class="m" font-size="13" dy="4">R</tspan><tspan dy="-4"> 改向右　+4</tspan></text>
+
+<!-- nodes -->
+<g fill="#ffffff" stroke="#183941" stroke-width="2.4">
+<circle cx="110" cy="140" r="34"/><circle cx="330" cy="140" r="34"/>
+<circle cx="110" cy="340" r="34"/><circle cx="330" cy="340" r="34"/>
+<circle cx="540" cy="340" r="34"/><circle cx="750" cy="340" r="34"/>
+<circle cx="900" cy="250" r="34" stroke="#08676e"/>
+</g>
+<text x="104" y="148" text-anchor="middle" class="n">D<tspan font-size="15" dy="5">L</tspan></text>
+<text x="324" y="148" text-anchor="middle" class="n">J<tspan font-size="15" dy="5">L</tspan></text>
+<text x="104" y="348" text-anchor="middle" class="n">D<tspan font-size="15" dy="5">R</tspan></text>
+<text x="324" y="348" text-anchor="middle" class="n">J<tspan font-size="15" dy="5">R</tspan></text>
+<text x="540" y="348" text-anchor="middle" class="n">W</text>
+<text x="750" y="348" text-anchor="middle" class="n">C</text>
+<text x="900" y="258" text-anchor="middle" class="n">B</text>
+
+<!-- h values -->
+<text x="110" y="200" text-anchor="middle" class="h">11/4</text>
+<text x="330" y="200" text-anchor="middle" class="h">27/8</text>
+<text x="110" y="400" text-anchor="middle" class="h">−3/2</text>
+<text x="330" y="400" text-anchor="middle" class="h">−7/8</text>
+<text x="540" y="400" text-anchor="middle" class="h">−1/4</text>
+<text x="750" y="400" text-anchor="middle" class="h">−5/8</text>
+<text x="900" y="200" text-anchor="middle" class="h">0（参照）</text>
+
+<!-- right panel -->
+<rect x="990" y="70" width="226" height="370" rx="10" fill="#f4f8f8" stroke="#08676e" stroke-width="1.6"/>
+<text x="1008" y="106" class="p" font-weight="600">恒左策略</text>
+<text x="1008" y="140" class="p"><tspan class="m">ρ</tspan><tspan class="m" font-size="14" dy="5">π</tspan><tspan dy="-5"> = 5/8</tspan></text>
+<text x="1008" y="172" class="p"><tspan class="m">h</tspan><tspan class="m" font-size="14" dy="5">π</tspan><tspan dy="-5">(</tspan><tspan class="m">B</tspan><tspan>) = 0</tspan></text>
+<line x1="1008" y1="196" x2="1198" y2="196" stroke="#b9c9cb"/>
+<text x="1008" y="228" class="p" font-weight="600">在 <tspan class="m">J</tspan><tspan class="m" font-size="14" dy="5">R</tspan><tspan dy="-5"> 比较首动作</tspan></text>
+<text x="1008" y="264" class="p">向左：0 − 5/8 − 1/4</text>
+<text x="1060" y="292" class="p">= −7/8</text>
+<text x="1008" y="328" class="p" style="fill:#955719">向右：4 − 5/8 + 0</text>
+<text x="1060" y="356" class="p" style="fill:#955719">= 27/8</text>
+<line x1="1008" y1="378" x2="1198" y2="378" stroke="#b9c9cb"/>
+<text x="1008" y="412" class="p">差 17/4，向右更好</text>
+</svg>

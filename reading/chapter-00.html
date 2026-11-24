@@ -1,0 +1,360 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第 0 章 课程导论 · 强化学习：问题、方法与持续学习智能体</title><meta name="description" content="附录。读本课公式时常用的几种推理：分清真值、估计与更新目标，用条件期望把求和变成采样，固定点与一次更新的区别，对数导数技巧，以及全课常用符号。"><meta name="author" content="温颖"><link rel="canonical" href="https://yingwen.io/rl-course/reading/chapter-00.html"><meta property="og:type" content="article"><meta property="og:site_name" content="强化学习：问题、方法与持续学习智能体"><meta property="og:locale" content="zh_CN"><meta property="og:title" content="第 0 章 课程导论 · 强化学习：问题、方法与持续学习智能体"><meta property="og:description" content="附录。读本课公式时常用的几种推理：分清真值、估计与更新目标，用条件期望把求和变成采样，固定点与一次更新的区别，对数导数技巧，以及全课常用符号。"><meta property="og:url" content="https://yingwen.io/rl-course/reading/chapter-00.html"><meta property="og:image" content="https://yingwen.io/rl-course/reader/pages/0001.webp"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1600"><meta property="og:image:height" content="900"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="第 0 章 课程导论 · 强化学习：问题、方法与持续学习智能体"><meta name="twitter:description" content="附录。读本课公式时常用的几种推理：分清真值、估计与更新目标，用条件期望把求和变成采样，固定点与一次更新的区别，对数导数技巧，以及全课常用符号。"><meta name="twitter:image" content="https://yingwen.io/rl-course/reader/pages/0001.webp"><script>(function(){try{var s=JSON.parse(localStorage.getItem('rl-reader')||'{}');var d=document.documentElement;if(s.theme)d.dataset.theme=s.theme;if(s.size)d.dataset.size=s.size;if(s.toc==='closed')d.dataset.toc='closed';if(s.slides==='open')d.dataset.slides='open';}catch(e){}})();</script><link rel="stylesheet" href="../assets/reading-af44916a2a.css"><style id="pb-cv">@media screen{article.chapter>:not(h1,h2,h3,header){content-visibility:auto;contain-intrinsic-size:auto 120px}}</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://yingwen.io/rl-course/reading/chapter-00.html#chapter","url":"https://yingwen.io/rl-course/reading/chapter-00.html","name":"第 0 章 课程导论","description":"附录。读本课公式时常用的几种推理：分清真值、估计与更新目标，用条件期望把求和变成采样，固定点与一次更新的区别，对数导数技巧，以及全课常用符号。","inLanguage":"zh-CN","author":{"@id":"https://yingwen.io/#person"},"isPartOf":{"@id":"https://yingwen.io/rl-course/#book"},"dateModified":"2026-11-23T02:38:40+08:00","image":"https://yingwen.io/rl-course/reader/pages/0001.webp","isAccessibleForFree":true,"breadcrumb":{"@id":"https://yingwen.io/rl-course/reading/chapter-00.html#breadcrumb"},"@type":["Chapter","LearningResource"],"learningResourceType":"教材章节","position":0,"teaches":"第 0 章 课程导论","mainEntityOfPage":"https://yingwen.io/rl-course/reading/chapter-00.html"},{"@type":"BreadcrumbList","@id":"https://yingwen.io/rl-course/reading/chapter-00.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"强化学习：问题、方法与持续学习智能体","item":"https://yingwen.io/rl-course/"},{"@type":"ListItem","position":2,"name":"第 0 章 课程导论","item":"https://yingwen.io/rl-course/reading/chapter-00.html"}]},{"@type":"Book","@id":"https://yingwen.io/rl-course/#book","name":"强化学习：问题、方法与持续学习智能体","url":"https://yingwen.io/rl-course/","author":{"@id":"https://yingwen.io/#person"},"inLanguage":"zh-CN"},{"@type":"WebSite","@id":"https://yingwen.io/rl-course/#website","name":"强化学习：问题、方法与持续学习智能体","url":"https://yingwen.io/rl-course/","inLanguage":"zh-CN","author":{"@id":"https://yingwen.io/#person"}},{"@type":"Person","@id":"https://yingwen.io/#person","name":"温颖","alternateName":"Ying Wen","url":"https://yingwen.io","affiliation":{"@type":"CollegeOrUniversity","name":"上海交通大学人工智能学院","alternateName":"Shanghai Jiao Tong University, School of Artificial Intelligence","url":"https://soai.sjtu.edu.cn/"},"sameAs":["https://orcid.org/0000-0003-1247-2382","https://scholar.google.com/citations?user=_A1CxG8AAAAJ","https://github.com/ying-wen","https://dblp.org/pid/41/4203-1.html"]}]}</script></head><body data-slide-viewer="../reader/index.html" data-slide-pages="../reader/pages/"><div class="yw-bar"><nav class="yw-nav" aria-label="yingwen.io"><a class="yw-name" href="https://yingwen.io/zh/">Ying Wen</a><div class="yw-links"><a href="https://yingwen.io/zh/">首页</a><a href="https://yingwen.io/zh/publications/">学术论文</a><a href="https://yingwen.io/zh/projects/">开源项目</a><a href="https://yingwen.io/zh/teaching/" class="active" aria-current="true">教学</a><a href="https://yingwen.io/zh/blog/">博客</a><a href="https://yingwen.io/zh/art/">AI艺术</a></div><button class="yw-more" id="yw-more" type="button" aria-expanded="false" aria-controls="yw-menu" aria-label="yingwen.io 导航"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></nav><div class="yw-menu" id="yw-menu" hidden><div><a href="https://yingwen.io/zh/">首页</a><a href="https://yingwen.io/zh/publications/">学术论文</a><a href="https://yingwen.io/zh/projects/">开源项目</a><a href="https://yingwen.io/zh/teaching/" class="active" aria-current="true">教学</a><a href="https://yingwen.io/zh/blog/">博客</a><a href="https://yingwen.io/zh/art/">AI艺术</a></div></div></div><header class="site-header"><nav class="site-nav" aria-label="课程资料"><a class="brand" data-nav="home" title="课程资料主页" href="../index.html"><span class="b-full">强化学习：问题、方法与持续学习智能体</span><span class="b-short">强化学习</span></a><div class="site-links"><a data-nav="slides" href="../reader/index.html">课件</a><a data-nav="reading" class="active" aria-current="page" href="../index.html#chapters">阅读稿</a><a data-nav="book" href="book.html">全书</a><a data-nav="code" href="../index.html#code">代码</a></div><div class="ch-pick"><button class="ch-btn" id="ch-btn" type="button" aria-expanded="false" aria-controls="ch-pop" aria-haspopup="true">选章<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6.2l4 4 4-4"/></svg></button><div class="ch-pop" id="ch-pop" hidden role="dialog" aria-label="选章" data-current="0"><div class="ch-group"><p class="ch-gname">课程导论</p><ul><li class="ch-row" data-ch="0"><a class="ch-main" data-pick="reading:0" href="chapter-00.html"><span class="ch-n">第 0 章</span><span class="ch-t">课程导论</span></a><span class="ch-alt"><a data-pick="reading:0" href="chapter-00.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:0" href="../reader/index.html#problem-01">课件</a></span></li></ul></div><div class="ch-group"><p class="ch-gname">第一部分　表格方法</p><ul><li class="ch-row" data-ch="1"><a class="ch-main" data-pick="reading:1" href="chapter-01.html"><span class="ch-n">第 1 章</span><span class="ch-t">强化学习的基本问题</span></a><span class="ch-alt"><a data-pick="reading:1" href="chapter-01.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:1" href="../reader/index.html#ch01-opening">课件</a></span></li><li class="ch-row" data-ch="2"><a class="ch-main" data-pick="reading:2" href="chapter-02.html"><span class="ch-n">第 2 章</span><span class="ch-t">多臂赌博机</span></a><span class="ch-alt"><a data-pick="reading:2" href="chapter-02.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:2" href="../reader/index.html#ch02-opening">课件</a></span></li><li class="ch-row" data-ch="3"><a class="ch-main" data-pick="reading:3" href="chapter-03.html"><span class="ch-n">第 3 章</span><span class="ch-t">有限马尔可夫决策过程</span></a><span class="ch-alt"><a data-pick="reading:3" href="chapter-03.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:3" href="../reader/index.html#ch03-opening">课件</a></span></li><li class="ch-row" data-ch="4"><a class="ch-main" data-pick="reading:4" href="chapter-04.html"><span class="ch-n">第 4 章</span><span class="ch-t">动态规划</span></a><span class="ch-alt"><a data-pick="reading:4" href="chapter-04.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:4" href="../reader/index.html#ch04-opening">课件</a></span></li><li class="ch-row" data-ch="5"><a class="ch-main" data-pick="reading:5" href="chapter-05.html"><span class="ch-n">第 5 章</span><span class="ch-t">蒙特卡洛与时序差分预测</span></a><span class="ch-alt"><a data-pick="reading:5" href="chapter-05.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:5" href="../reader/index.html#sample14-mctd-task">课件</a></span></li><li class="ch-row" data-ch="6"><a class="ch-main" data-pick="reading:6" href="chapter-06.html"><span class="ch-n">第 6 章</span><span class="ch-t">动作价值控制与离策略学习</span></a><span class="ch-alt"><a data-pick="reading:6" href="chapter-06.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:6" href="../reader/index.html#ch06-opening">课件</a></span></li><li class="ch-row" data-ch="7"><a class="ch-main" data-pick="reading:7" href="chapter-07.html"><span class="ch-n">第 7 章</span><span class="ch-t">多步学习与资格迹</span></a><span class="ch-alt"><a data-pick="reading:7" href="chapter-07.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:7" href="../reader/index.html#ch07-opening">课件</a></span></li><li class="ch-row" data-ch="8"><a class="ch-main" data-pick="reading:8" href="chapter-08.html"><span class="ch-n">第 8 章</span><span class="ch-t">模型学习与规划</span></a><span class="ch-alt"><a data-pick="reading:8" href="chapter-08.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:8" href="../reader/index.html#ch08-opening">课件</a></span></li></ul></div><div class="ch-group"><p class="ch-gname">第二部分　近似方法与现代智能体</p><ul><li class="ch-row" data-ch="9"><a class="ch-main" data-pick="reading:9" href="chapter-09.html"><span class="ch-n">第 9 章</span><span class="ch-t">价值函数逼近</span></a><span class="ch-alt"><a data-pick="reading:9" href="chapter-09.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:9" href="../reader/index.html#ch09-opening">课件</a></span></li><li class="ch-row" data-ch="10"><a class="ch-main" data-pick="reading:10" href="chapter-10.html"><span class="ch-n">第 10 章</span><span class="ch-t">深度价值学习</span></a><span class="ch-alt"><a data-pick="reading:10" href="chapter-10.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:10" href="../reader/index.html#ch10-opening">课件</a></span></li><li class="ch-row" data-ch="11"><a class="ch-main" data-pick="reading:11" href="chapter-11.html"><span class="ch-n">第 11 章</span><span class="ch-t">策略梯度与行动者–评论者</span></a><span class="ch-alt"><a data-pick="reading:11" href="chapter-11.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:11" href="../reader/index.html#ch11-opening">课件</a></span></li><li class="ch-row" data-ch="12"><a class="ch-main" data-pick="reading:12" href="chapter-12.html"><span class="ch-n">第 12 章</span><span class="ch-t">经验覆盖、模型规划与大规模训练</span></a><span class="ch-alt"><a data-pick="reading:12" href="chapter-12.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:12" href="../reader/index.html#frontier-v8-ch12-opening">课件</a></span></li><li class="ch-row" data-ch="13"><a class="ch-main" data-pick="reading:13" href="chapter-13.html"><span class="ch-n">第 13 章</span><span class="ch-t">大语言环境下的强化学习</span></a><span class="ch-alt"><a data-pick="reading:13" href="chapter-13.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:13" href="../reader/index.html#frontier-v8-ch13-opening">课件</a></span></li><li class="ch-row" data-ch="14"><a class="ch-main" data-pick="reading:14" href="chapter-14.html"><span class="ch-n">第 14 章</span><span class="ch-t">物理环境下的强化学习</span></a><span class="ch-alt"><a data-pick="reading:14" href="chapter-14.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:14" href="../reader/index.html#emb-opening">课件</a></span></li></ul></div><div class="ch-group"><p class="ch-gname">第三部分　持续强化学习</p><ul><li class="ch-row" data-ch="15"><a class="ch-main" data-pick="reading:15" href="chapter-15.html"><span class="ch-n">第 15 章</span><span class="ch-t">学习器与全程回报</span></a><span class="ch-alt"><a data-pick="reading:15" href="chapter-15.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:15" href="../reader/index.html#ch15-opening">课件</a></span></li><li class="ch-row" data-ch="16"><a class="ch-main" data-pick="reading:16" href="chapter-16.html"><span class="ch-n">第 16 章</span><span class="ch-t">平均奖励与差分价值</span></a><span class="ch-alt"><a data-pick="reading:16" href="chapter-16.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:16" href="../reader/index.html#ch16-opening">课件</a></span></li><li class="ch-row" data-ch="17"><a class="ch-main" data-pick="reading:17" href="chapter-17.html"><span class="ch-n">第 17 章</span><span class="ch-t">流式学习与在线信用分配</span></a><span class="ch-alt"><a data-pick="reading:17" href="chapter-17.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:17" href="../reader/index.html#ch17-opening">课件</a></span></li><li class="ch-row" data-ch="18"><a class="ch-main" data-pick="reading:18" href="chapter-18.html"><span class="ch-n">第 18 章</span><span class="ch-t">智能体状态的充分性</span></a><span class="ch-alt"><a data-pick="reading:18" href="chapter-18.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:18" href="../reader/index.html#ch18-opening">课件</a></span></li><li class="ch-row" data-ch="19"><a class="ch-main" data-pick="reading:19" href="chapter-19.html"><span class="ch-n">第 19 章</span><span class="ch-t">通用价值函数</span></a><span class="ch-alt"><a data-pick="reading:19" href="chapter-19.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:19" href="../reader/index.html#ch19-opening">课件</a></span></li><li class="ch-row" data-ch="20"><a class="ch-main" data-pick="reading:20" href="chapter-20.html"><span class="ch-n">第 20 章</span><span class="ch-t">状态构造与表示学习</span></a><span class="ch-alt"><a data-pick="reading:20" href="chapter-20.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:20" href="../reader/index.html#ch20-opening">课件</a></span></li><li class="ch-row" data-ch="21"><a class="ch-main" data-pick="reading:21" href="chapter-21.html"><span class="ch-n">第 21 章</span><span class="ch-t">技能与时间抽象</span></a><span class="ch-alt"><a data-pick="reading:21" href="chapter-21.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:21" href="../reader/index.html#ch21-opening">课件</a></span></li><li class="ch-row" data-ch="22"><a class="ch-main" data-pick="reading:22" href="chapter-22.html"><span class="ch-n">第 22 章</span><span class="ch-t">技能模型与规划</span></a><span class="ch-alt"><a data-pick="reading:22" href="chapter-22.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:22" href="../reader/index.html#ch22-opening">课件</a></span></li><li class="ch-row" data-ch="23"><a class="ch-main" data-pick="reading:23" href="chapter-23.html"><span class="ch-n">第 23 章</span><span class="ch-t">元学习与可塑性</span></a><span class="ch-alt"><a data-pick="reading:23" href="chapter-23.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:23" href="../reader/index.html#ch23-opening">课件</a></span></li><li class="ch-row" data-ch="24"><a class="ch-main" data-pick="reading:24" href="chapter-24.html"><span class="ch-n">第 24 章</span><span class="ch-t">整体智能体架构</span></a><span class="ch-alt"><a data-pick="reading:24" href="chapter-24.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:24" href="../reader/index.html#ch24-opening">课件</a></span></li><li class="ch-row" data-ch="25"><a class="ch-main" data-pick="reading:25" href="chapter-25.html"><span class="ch-n">第 25 章</span><span class="ch-t">知识的维护、检验与更新</span></a><span class="ch-alt"><a data-pick="reading:25" href="chapter-25.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:25" href="../reader/index.html#ch25-opening">课件</a></span></li><li class="ch-row" data-ch="26"><a class="ch-main" data-pick="reading:26" href="chapter-26.html"><span class="ch-n">第 26 章</span><span class="ch-t">持续强化学习的基准设计与 lifetime 评价</span></a><span class="ch-alt"><a data-pick="reading:26" href="chapter-26.html">阅读稿</a><span aria-hidden="true">·</span><a data-pick="slides:26" href="../reader/index.html#ch26-opening">课件</a></span></li></ul></div><div class="ch-group"><p class="ch-gname">附录</p><ul><li class="ch-row" data-ch="prereq"><a class="ch-main" data-pick="reading:prereq" href="prerequisites.html"><span class="ch-n">附录</span><span class="ch-t">读公式时需要的几种推理</span></a><span class="ch-alt"><a data-pick="reading:prereq" href="prerequisites.html">阅读稿</a></span></li><li class="ch-row" data-ch="repro"><a class="ch-main" data-pick="reading:repro" href="book.html#chapter-appendix-reproduction"><span class="ch-n">附录</span><span class="ch-t">复现材料</span></a><span class="ch-alt"><a data-pick="reading:repro" href="book.html#chapter-appendix-reproduction">阅读稿</a></span></li></ul></div></div></div><div class="site-tools"><button class="tool" id="toc-toggle" type="button" aria-label="目录" title="目录"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4h11M2.5 8h11M2.5 12h7"/></svg></button><a class="tool" id="back" href="../reader/index.html#problem-01" hidden>返回课件</a><button class="tool slides-toggle" id="slides-toggle" type="button" aria-pressed="false" aria-controls="slide-panel" title="在右侧显示本章全部课件，随正文滚动"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3" width="13" height="9.5" rx="1"/><path d="M5 14.5h6"/></svg><span class="lbl">课件</span></button><button class="tool" id="settings-toggle" type="button" aria-haspopup="true" aria-expanded="false" title="阅读设置">Aa</button><a class="gh-link" data-nav="contribute" title="欢迎贡献：在 GitHub 上提意见、勘误，或提交修改" aria-label="欢迎贡献" href="../contribute.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg><span>欢迎贡献</span></a><button class="nav-more" id="nav-more" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="课程资料导航"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5h.01M12 12h.01M12 19h.01"/></svg></button></div></nav><div class="nav-menu" id="nav-menu" hidden><a data-nav="slides" href="../reader/index.html">课件</a><a data-nav="reading" class="active" aria-current="page" href="../index.html#chapters">阅读稿</a><a data-nav="book" href="book.html">全书</a><a data-nav="code" href="../index.html#code">代码</a><a class="nav-contrib" data-nav="contribute" href="../contribute.html">欢迎贡献：提意见、改进本课</a></div></header><div class="progress" aria-hidden="true"></div><div class="settings" id="settings" hidden role="dialog" aria-label="阅读设置"><p>主题</p><div class="seg"><button data-k="theme" data-v="auto">跟随系统</button><button data-k="theme" data-v="light">浅色</button><button data-k="theme" data-v="dark">深色</button></div><p>字号</p><div class="seg"><button data-k="size" data-v="s">小</button><button data-k="size" data-v="m">中</button><button data-k="size" data-v="l">大</button></div></div><div class="scrim"></div><aside class="toc" aria-label="本章目录"><a class="toc-title" href="#top">第 0 章　课程导论</a><p>温颖 · <a href="https://yingwen.io">yingwen.io</a></p><ol class="toc-list"><li><a href="#chapter-00-ch00-problem">0.1　强化学习要解决的问题</a></li><li><a href="#chapter-00-ch00-question">0.2　这门课问什么</a></li><li><a href="#chapter-00-ch00-textbook">0.3　参考教材与读法</a></li><li><a href="#chapter-00-ch00-roadmap">0.4　全课路线</a><ol><li><a href="#chapter-00-ch00-part1">第一部分　表格方法</a></li><li><a href="#chapter-00-ch00-part2">第二部分　近似方法与现代智能体</a></li><li><a href="#chapter-00-ch00-part3">第三部分　持续强化学习</a></li></ol></li><li><a href="#chapter-00-ch00-summary">本章小结</a></li><li><a href="#chapter-00-ch00-further-reading">延伸阅读</a></li><li><a href="#chapter-00-ch00-exercises">练习</a></li></ol></aside><main id="top"><article class="chapter" id="chapter-00"><header class="chapter-head"><h1 id="chapter-00-第-0-章-课程导论"><span class="ch-num">第 0 章</span><span class="ch-title">课程导论</span></h1><div class="byline"><span class="author">温颖 · <a href="https://yingwen.io">yingwen.io</a></span><span class="gh-edit"><a href="https://github.com/ying-wen/rl-course/edit/main/source/textbook/00-course.md" title="在 GitHub 网页编辑器里修改本章源文件，提交后自动生成 PR">在 GitHub 上修改本章</a><a href="https://github.com/ying-wen/rl-course/issues/new?template=erratum.yml&title=%5B%E5%8B%98%E8%AF%AF%5D%20%E7%AC%AC%200%20%E7%AB%A0%EF%BC%9A" title="在 GitHub 上提一条勘误或建议">提意见</a><a href="../contribute.html" title="欢迎贡献：能做什么、怎样提交">欢迎贡献</a></span><a class="slide-link chapter-slides" href="../reader/index.html#problem-01" data-slide-label="problem-01" title="在逐页课件中打开本章课件">本章课件</a></div></header>
+<p>这门课讨论一个问题：智能体在环境中行动，没有人告诉它哪个动作正确，它只能从自己行动换来的观测和奖励里学习，怎样才能让长期累积的奖励尽量大。全课分三部分，三部分讨论的是同一个问题，每一部分放宽前一部分的一项默认条件，使问题更接近真实处境。第一部分假定状态很少，价值可以逐项记在一张表里；第二部分让状态多到无法逐项记录，必须用共享参数概括；第三部分让环境在学习过程中持续变化，智能体只有一条不能重来的经验流。每次放宽条件都会让前一部分的某些方法失效，失效之处就是下一章要处理的困难，方法则针对这个困难提出。本章先说明问题本身和看待问题的框架，再说明参考教材的用法，最后按问题、变化、困难、方法的顺序把 26 章连成一条路线。</p>
+<h2 id="chapter-00-ch00-problem">0.1　强化学习要解决的问题</h2>
+<div id="chapter-00-slide-problem-01" data-slide-label="problem-01">
+<p data-slide-at="problem-01">强化学习研究基于经验的预测与控制。智能体与环境按离散时刻交互：在时刻 <span class="nobr"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span>，</span>智能体选择动作 <span class="nobr"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">A_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，</span>环境随后给出新的观测 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>O</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">O_{t+1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span> 和一个标量奖励 <span class="nobr"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">R_{t+1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>。</span>智能体的目标是让此后累积的奖励尽量大，常用回报 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>G</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">G_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 表示从时刻 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span> 起累积的奖励，用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>J</mi><mo stretchy="false">(</mo><mi>π</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi mathvariant="double-struck">E</mi><mi>π</mi></msub><mo stretchy="false">[</mo><msub><mi>G</mi><mn>0</mn></msub><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">J(\pi)=\mathbb{E}_\pi[G_0]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathbb">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span> 表示策略 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span> 的期望回报。预测是估计在某种行为方式下将来能得到多少奖励，控制是利用这些估计改进行为，两者都只能依靠交互得到的样本。</p>
+<p>课件封面的图仿照 Kris De Asis 画大世界的方式：环境是整个地球，智能体只是其中很小的一部分。这幅图提醒读者，环境的状态远多于智能体能够表示的东西，智能体对世界的描述总是近似的，它学到的价值和模型也总是近似的。课程前半部分为了把方法讲清楚，会先在小环境里讨论问题，到第三部分再回到这个大世界的设定。</p>
+<p>阅读任何一个算法时，可以先问四件事：它估计什么，样本从哪里来，为什么这样更新，更新怎样影响后续行动。第一问确定算法的预测对象，例如状态价值、动作价值、策略或模型；第二问确定数据来源，例如当前策略、旧策略、记录下来的数据或学到的模型；第三问对应更新目标的推导，例如贝尔曼方程或策略梯度定理；第四问把预测和控制连接起来，因为智能体的行为会改变它以后看到的数据。后面各章介绍新方法时，都可以用这四问来对照它和已有方法的异同。</p>
+</div>
+<div id="chapter-00-slide-course-thinking" data-slide-label="course-thinking">
+<p data-slide-at="course-thinking">本课用一个简单的框架描述问题与解法的关系。一个问题由三样东西确定：目标说明要达到什么，约束说明可以用什么、不能用什么，判据说明怎样衡量离目标还有多远。解法在约束之内逐步逼近目标，每一步用判据检查进展；检查的结果有时会反过来说明问题本身写得不对，于是需要修改目标、约束或判据。这一循环是 Sutton 整理的研究格言（2006 年修订版）和 Sutton 与 Barto 教材第 1 章共同的思路，本课把它写成问题、解法、检验三个环节。</p>
+<p>把强化学习放进这个框架：目标是让期望回报尽量大，回报是一段交互里奖励的总和；约束是只能从自己行动换来的经验里学习；判据是在同一起点分布、同一评价协议下多次独立运行得到的平均回报。一条轨迹只给出一个回报，它受环境与策略的随机性影响，多次独立运行的平均才是期望回报的估计，运行次数越多，估计越稳定。约束这一项把强化学习和监督学习区分开来。监督学习的样本带有正确答案，强化学习的样本只告诉智能体所选动作得到了多少奖励，没有说明别的动作会怎样，也没有说明这次奖励应归功于之前的哪一步。第 1 章会把这三处困难分别称为评价性反馈、延迟奖励和不完整观测。</p>
+<p>这个框架也有不同意见。有些好的解法先于问题出现，人们拿到一个方法后才发现它能回答什么问题；有些判据无法事先写出，只能在检验中逐渐明确。框架中从检验指回问题的那条边就是为这类情况留的：问题的表述可以在检验之后修改。研究中还有一条与此相配的习惯，每次只改动一处，这样才能知道观察到的效果由哪一处改动引起；本课在比较算法时也尽量遵守这一点。</p>
+</div>
+<h2 id="chapter-00-ch00-question">0.2　这门课问什么</h2>
+<div id="chapter-00-slide-course-question" data-slide-label="course-question">
+<p data-slide-at="course-question">全课围绕一个问题展开：没有人给出正确动作，只凭交互得到的观测与奖励，智能体怎样学会实现目标。Sutton 常引用 McCarthy 对智能的界定，智能是在世界中实现目标的能力中的计算部分。按照这一界定，研究智能就是研究这种计算，而心智可以看作一个学习器，它通过与世界交互来学习。强化学习把这一界定写成上一节的交互接口：目标由奖励给出，能力体现为策略，学习只依靠交互。</p>
+<p>学骑自行车可以说明这个问题的形态。初学者没有一份逐时刻的正确动作表，只能在骑行中感受车身是否稳定、是否摔倒，再据此调整用力和转向；摔倒的后果常常由几秒之前的动作造成。这个例子也有局限：真实的学习者常常得到旁人扶车、示范和讲解，这些帮助超出了只凭奖励这一设定。本课第 13、14 章会讨论示范、人类反馈等信息怎样进入强化学习的接口，在那之前，我们先研究只有奖励时能够做到什么。骑车的例子也对应全课的三部分：靠自己一次次试出来，对应第一部分的交互学习；每次骑的路都不一样，状态无法逐一列表，对应第二部分的概括；学会以后还要随路况调整，对应第三部分的持续学习。</p>
+<figure>
+<img src="../media/eee8c9019065357a.webp" alt="全课三部分：表格方法、近似方法与现代智能体、持续强化学习，依次放宽状态少和环境不变两项条件"  loading="lazy" decoding="async" width="832" height="268"/>
+<figcaption aria-hidden="true">全课三部分：表格方法、近似方法与现代智能体、持续强化学习，依次放宽状态少和环境不变两项条件</figcaption>
+</figure>
+<p>同一个问题在三部分中依次放大。第一部分（第 1–8 章）讨论表格方法，状态少，价值可以逐项列在一张表里；第二部分（第 9–14 章）讨论近似方法与现代智能体，状态多到无法逐项记录，要靠共享参数概括；第三部分（第 15–26 章）讨论持续强化学习，智能体面对的是一条经验流，学习不能重来。从第一部分到第二部分，变化是状态太多；从第二部分到第三部分，变化是环境在变。</p>
+<p>对这门课的问题也有不同看法。有人认为智能还涉及理解、意识或社会性，单用实现目标的计算来界定过窄；有人认为大语言模型和机器人两章更接近工程实践，未必属于强化学习的核心问题；也有人认为持续学习才是原本的问题，前两部分讨论的是它的简化形式。本课采用最后一种排列方式来组织内容，同时在相关章节说明这些不同意见各自的依据。</p>
+</div>
+<h2 id="chapter-00-ch00-textbook">0.3　参考教材与读法</h2>
+<div id="chapter-00-slide-course-textbook" data-slide-label="course-textbook">
+<p data-slide-at="course-textbook">本课的参考教材是 Richard S. Sutton 与 Andrew G. Barto 的《Reinforcement Learning: An Introduction》第二版（MIT Press，2018），第一版出版于 1998 年。第二版在第一版基础上增加了带函数逼近的控制、策略梯度方法，以及心理学、神经科学和应用案例几章。全书由作者在其网站免费提供（incompleteideas.net/book/the-book-2nd.html）。两位作者获得了 2024 年图灵奖。</p>
+<figure>
+<img src="../media/4c5a29a4c1151a27.jpg" width="126" alt="Sutton 与 Barto《Reinforcement Learning: An Introduction》第二版封面"  loading="lazy" decoding="async"/>
+<figcaption aria-hidden="true">Sutton 与 Barto《Reinforcement Learning: An Introduction》第二版封面</figcaption>
+</figure>
+<p>本课与教材的对应关系如下表。第一部分基本沿用教材第一部分的顺序，第二部分的前半段对应教材第二部分，教材第三部分的心理学、神经科学和应用内容分散在本课几章之中。本课第 12–26 章的大部分内容超出了教材范围，主要依据近年的论文，相应文献在各章的延伸阅读中列出。</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>教材部分</th>
+<th>教材章节</th>
+<th>本课对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一部分　表格解法</td>
+<td>第 2–8 章</td>
+<td>第 1–8 章：第 2、3、4、8 章与教材同号章对应；第 5 章对应教材第 5 章的蒙特卡洛预测与第 6 章的时序差分预测；第 6 章对应教材第 5、6 章的控制部分与离策略重要性采样；第 7 章对应教材第 7 章与第 12 章</td>
+</tr>
+<tr>
+<td>第二部分　近似解法</td>
+<td>第 9–13 章</td>
+<td>第 9 章对应教材第 9–11 章；第 11 章对应教材第 13 章；资格迹的部分内容放在第 7 章</td>
+</tr>
+<tr>
+<td>第三部分　深入探讨</td>
+<td>第 14–17 章</td>
+<td>第 7 章中的神经科学内容；第 10 章的 Atari 案例与第 12 章的 AlphaGo 系列案例，展开了教材第 16 章</td>
+</tr>
+<tr>
+<td>超出教材</td>
+<td>—</td>
+<td>第 12–26 章的大部分内容；其中第 16 章与教材 §10.3–10.4 的平均奖励有关，第 18、19、21–22 章分别与教材 §17.3、§17.1、§17.2 的讨论有关</td>
+</tr>
+</tbody>
+</table></div>
+<p>建议的读法是课前或课后读教材中对应的小节。教材对表格方法和线性函数逼近的推导比本课讲义更完整，读教材可以补足讲义为节省篇幅而省略的步骤；本课在第二、三部分加入的内容，教材只在最后一章作了展望，这部分需要以讲义和所列论文为主。阅读时可以用 0.1 节的四问对照教材中的每个算法。</p>
+</div>
+<h2 id="chapter-00-ch00-roadmap">0.4　全课路线</h2>
+<p>全课 26 章按同一条线索排列：每章先说明要解决的问题，再说明它和前一章相比条件有什么变化，这一变化带来什么困难，最后给出针对这一困难的方法。前一章方法的局限通常就是后一章问题的来源。下面分三部分说明这条线索，每部分给出一张章节表，表中“由何引出”一列写明该章的问题是从哪一处局限产生的。</p>
+<h3 id="chapter-00-ch00-part1">第一部分　表格方法</h3>
+<div id="chapter-00-slide-contents-1" data-slide-label="contents-1">
+<p data-slide-at="contents-1">第一部分从第 1 章的基本问题出发：智能体与环境交互，以累积奖励定义目标。第 1 章给出交互接口、奖励与回报，区分问题与方法，并把任务分为预测、控制与规划。直接求解这个问题有三处困难：反馈只评价所选动作，奖励可能延迟，观测可能不完整。第 2 章和第 3 章分别去掉其中的一部分困难，把问题定义清楚；第 4 章到第 8 章是在这些定义之上的求解方法。</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>章</th>
+<th>名称</th>
+<th>由何引出</th>
+<th>问题与方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>强化学习的基本问题</td>
+<td>全课起点</td>
+<td>交互接口、奖励与回报；预测、控制与规划的区分</td>
+</tr>
+<tr>
+<td>2</td>
+<td>多臂赌博机</td>
+<td>去掉动作对未来状态的影响，只保留评价性反馈</td>
+<td>估计每个动作的平均奖励，在探索与利用之间取舍；ε-贪心、乐观初值、UCB、梯度赌博机、非平稳问题的常数步长、上下文赌博机</td>
+</tr>
+<tr>
+<td>3</td>
+<td>有限马尔可夫决策过程</td>
+<td>第 2 章没有状态转移，动作的后果不会延续</td>
+<td>加入状态转移，定义回报、折扣、状态价值与动作价值，写出贝尔曼期望方程与最优策略</td>
+</tr>
+<tr>
+<td>4</td>
+<td>动态规划</td>
+<td>第 3 章给出了方程，尚未给出求解办法</td>
+<td>在模型已知时迭代求解：策略评估、策略改进定理、策略迭代、价值迭代、广义策略迭代、异步动态规划</td>
+</tr>
+<tr>
+<td>5</td>
+<td>蒙特卡洛与时序差分预测</td>
+<td>第 4 章需要完整的环境模型</td>
+<td>只用经验估计固定策略的价值：蒙特卡洛用完整回报，TD(0) 用自举；比较两者的偏差与方差及批量情形</td>
+</tr>
+<tr>
+<td>6</td>
+<td>动作价值控制与离策略学习</td>
+<td>第 5 章只评估固定策略</td>
+<td>从预测转向控制：Sarsa、期望 Sarsa、Q-learning、蒙特卡洛控制、离策略重要性采样、最大化偏差与双 Q 学习</td>
+</tr>
+<tr>
+<td>7</td>
+<td>多步学习与资格迹</td>
+<td>第 5、6 章只在一步或完整回合两端取目标</td>
+<td>n 步回报与 λ-回报、资格迹、在线前向视角的等价、离策略多步学习与树回溯</td>
+</tr>
+<tr>
+<td>8</td>
+<td>模型学习与规划</td>
+<td>第 5–7 章每条真实经验只用一次</td>
+<td>从经验中学模型，再用模型规划：Dyna-Q、优先扫描、决策时搜索、模型覆盖与 Dyna-Q+</td>
+</tr>
+</tbody>
+</table></div>
+<p>这一部分的顺序可以按信息的多少来理解。第 3 章定义问题之后，第 4 章假定模型已知，可以直接对方程迭代；第 5 章假定只有经验，只能用样本估计价值。第 6 章把预测推进到控制，同策略方法用当前行为产生的数据改进当前行为，离策略方法用一种行为产生的数据学习另一种策略，这一区分在后面各章反复出现。第 7 章把一步目标和完整回报统一到多步目标之中，第 8 章让智能体学习模型并用它规划，把第 4 章的规划和第 5–7 章的学习重新连接起来。表格方法有一个共同的局限：每个状态的价值单独记录，访问一个状态得到的经验不会影响其他状态的估计，这一局限引出第二部分。</p>
+</div>
+<h3 id="chapter-00-ch00-part2">第二部分　近似方法与现代智能体</h3>
+<div id="chapter-00-slide-contents-2" data-slide-label="contents-2">
+<p data-slide-at="contents-2">第二部分处理状态太多或动作连续的情形。状态太多时，一张表无法列出所有状态，价值要用共享参数表示，相近的状态通过参数共享经验；动作连续时，策略要写成参数化的分布。表示改变之后，表格方法中成立的若干性质不再自动成立；数据固定或采样昂贵时，还要考察经验从何而来。这一部分的最后两章把同一套方法放进语言环境和物理世界，这是同一套方法面对的两种交互接口。</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>章</th>
+<th>名称</th>
+<th>由何引出</th>
+<th>问题与方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>价值函数逼近</td>
+<td>表格方法不能在状态之间概括</td>
+<td>在访问分布上用共享参数表示价值：梯度蒙特卡洛与半梯度 TD、线性 TD、致命三元组、状态混叠、神经网络；LSTD、GTD、ETD 为选读</td>
+</tr>
+<tr>
+<td>10</td>
+<td>深度价值学习</td>
+<td>第 9 章指出函数逼近、自举与离策略结合时可能发散</td>
+<td>第 6 章的 Q-learning 目标加上第 9 章的函数逼近：DQN 的经验回放与目标网络、拟合 Q 迭代、Double DQN、Rainbow 的组成部分、Ape-X 与 R2D2、难探索问题、数据效率与评价</td>
+</tr>
+<tr>
+<td>11</td>
+<td>策略梯度与行动者–评论者</td>
+<td>第 10 章从价值导出策略，难以处理连续动作</td>
+<td>直接表示策略：策略梯度定理、REINFORCE、GAE、TRPO、PPO、DPG、DDPG、TD3、最大熵方法与 SAC</td>
+</tr>
+<tr>
+<td>12</td>
+<td>经验覆盖、模型规划与大规模训练</td>
+<td>第 10、11 章的数据都由交互即时产生</td>
+<td>区分后果的四种来源：固定的记录（覆盖问题）、学到的模型（误差累积与搜索）、较旧版本的自己（并行采样、离策略修正、滞后与复用）、其他学习者（自我对弈）</td>
+</tr>
+<tr>
+<td>13</td>
+<td>大语言环境下的强化学习</td>
+<td>前几章的动作是单步的低维选择</td>
+<td>动作是生成的词元序列，经外部执行得到反馈：序列、消息与词元三级的信用分配，部署时的计算，数据与环境，经验反馈与离策略差距，多智能体，自我改进，多模态</td>
+</tr>
+<tr>
+<td>14</td>
+<td>物理环境下的强化学习</td>
+<td>第 13 章的转移由软件给定，重置几乎没有代价</td>
+<td>换成身体：感知运动接口与物理时间，状态与奖励的测量，示范学习，试验与模型，层次与技能，部署中的学习与检验</td>
+</tr>
+</tbody>
+</table></div>
+<p>这一部分的关系可以从三条边来看。第 9 章到第 10 章是把第 6 章的控制目标和第 9 章的表示结合起来，第 10 章到第 11 章是把表示的对象从价值换成策略。第 12 章继承第 8 章的规划，以及第 10、11 章复用旧经验的做法，问题是经验从哪里来、可信到什么程度。第 13、14 章可以用一步价值表达式 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi><mo stretchy="false">(</mo><mi>s</mi><mo separator="true">,</mo><mi>a</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="double-struck">E</mi><mo stretchy="false">[</mo><msub><mi>R</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>γ</mi><mi>v</mi><mo stretchy="false">(</mo><msub><mi>S</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">q(s,a)=\mathbb{E}[R_{t+1}+\gamma v(S_{t+1})]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">q</span><span class="mopen">(</span><span class="mord mathnormal">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathbb">E</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">γ</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mclose">)]</span></span></span></span> 的四个输入来对照：在语言模型中，转移由解码过程给定，奖励往往是代理指标，动作是一长串词元；在具身机器人中，转移、状态、奖励和动作四项都失去了前几章的便利，控制器、观测延迟和重置代价共同决定哪些经验能够采集。</p>
+</div>
+<h3 id="chapter-00-ch00-part3">第三部分　持续强化学习</h3>
+<div id="chapter-00-slide-contents-3" data-slide-label="contents-3">
+<p data-slide-at="contents-3">第三部分改变问题的设定。前两部分的多数章默认存在训练与部署两个阶段，设计者准备环境、运行训练、评估之后再部署，交互涉及设计者、智能体和世界三方。第 2 章的累计遗憾是例外，它把试错期间少拿的奖励也算进评价。第三部分只保留智能体与世界两方，智能体在一条不重来的经验流中边行动边学习，评价的对象也随之从一个固定策略变为一个学习器。第 15 章把学习器写成 <span class="nobr"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>=</mo><mo stretchy="false">(</mo><msub><mi>ν</mi><mi>M</mi></msub><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>U</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">L=(\nu_M,b,U)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0637em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mclose">)</span></span></span></span>，</span>分别是记忆的初始化、行为规则和更新规则，记忆 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>M</mi><mi>t</mi></msub><mo>=</mo><mo stretchy="false">(</mo><msub><mi>Z</mi><mi>t</mi></msub><mo separator="true">,</mo><msub><mi>W</mi><mi>t</mi></msub><mo separator="true">,</mo><msub><mi>K</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">M_t=(Z_t,W_t,K_t)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 随经验改变；评价学习器的量是全程回报 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>J</mi><mi>T</mi></msub><mo stretchy="false">(</mo><mi>L</mi><mo separator="true">;</mo><mi>ν</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi mathvariant="double-struck">E</mi><mrow><mi mathvariant="script">E</mi><mo>∼</mo><mi>ν</mi><mo separator="true">,</mo><mi>L</mi></mrow></msub><mo stretchy="false">[</mo><msub><mo>∑</mo><mrow><mi>t</mi><mo>&lt;</mo><mi>T</mi></mrow></msub><msub><mi>R</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">J_T(L;\nu)=\mathbb E_{\mathcal E\sim\nu,L}[\sum_{t&lt;T}R_{t+1}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.09618em;">J</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0962em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">L</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0771em;vertical-align:-0.3271em;"></span><span class="mord"><span class="mord mathbb">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathcal mtight" style="margin-right:0.08944em;">E</span><span class="mrel mtight">∼</span><span class="mord mathnormal mtight" style="margin-right:0.06366em;">ν</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">&lt;</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span>，即在环境分布 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ν</mi></mrow><annotation encoding="application/x-tex">\nu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span></span></span></span> 下整个 lifetime 内累积的奖励。这一设定与 Javed 和 Sutton 提出的<a href="https://oaklab.ai/posts/the-big-world-hypothesis.html">大世界假设</a>相合：世界远大于智能体，环境对智能体而言总在变化。</p>
+<p>设定改变之后，第 3–14 章依赖的七项默认条件需要逐项检查。下表列出每项条件和撤去它的章节，撤去一项条件即对应一种新的困难。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>默认条件</th>
+<th>撤去后的问题</th>
+<th>章</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 先学后用</td>
+<td>学习与使用同时进行，评价对象变为学习器</td>
+<td>15</td>
+</tr>
+<tr>
+<td>② 回合会结束</td>
+<td>经验流没有终点，折扣回报需要换成平均奖励</td>
+<td>16</td>
+</tr>
+<tr>
+<td>③ 经验可存可取</td>
+<td>每步只能用当前经验更新，信用分配要在线完成</td>
+<td>17</td>
+</tr>
+<tr>
+<td>④ 状态已给定且马尔可夫</td>
+<td>智能体要从观测中构造自己的状态</td>
+<td>18、20</td>
+</tr>
+<tr>
+<td>⑤ 只预测奖励</td>
+<td>预测对象扩展到任意信号</td>
+<td>19</td>
+</tr>
+<tr>
+<td>⑥ 一步一个决策</td>
+<td>决策单位扩展为持续多步的技能</td>
+<td>21、22</td>
+</tr>
+<tr>
+<td>⑦ 学习规则由设计者写定</td>
+<td>学习规则本身也要学习，并需要保持可塑性</td>
+<td>23</td>
+</tr>
+</tbody>
+</table></div>
+<p>第 15–26 章按六个问题排列。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>章</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>评价什么</td>
+<td>15</td>
+<td>学习器与全程回报</td>
+</tr>
+<tr>
+<td></td>
+<td>16</td>
+<td>平均奖励与差分价值</td>
+</tr>
+<tr>
+<td>怎样更新</td>
+<td>17</td>
+<td>流式学习与在线信用分配</td>
+</tr>
+<tr>
+<td>依据什么状态</td>
+<td>18</td>
+<td>智能体状态的充分性</td>
+</tr>
+<tr>
+<td></td>
+<td>19</td>
+<td>通用价值函数</td>
+</tr>
+<tr>
+<td></td>
+<td>20</td>
+<td>状态构造与表示学习</td>
+</tr>
+<tr>
+<td>以什么为决策单位</td>
+<td>21</td>
+<td>技能与时间抽象</td>
+</tr>
+<tr>
+<td></td>
+<td>22</td>
+<td>技能模型与规划</td>
+</tr>
+<tr>
+<td>学习规则由谁定</td>
+<td>23</td>
+<td>元学习与可塑性</td>
+</tr>
+<tr>
+<td>合成一个学习器</td>
+<td>24</td>
+<td>整体智能体架构</td>
+</tr>
+<tr>
+<td></td>
+<td>25</td>
+<td>知识的维护、检验与更新</td>
+</tr>
+<tr>
+<td></td>
+<td>26</td>
+<td>持续强化学习的基准设计与 lifetime 评价</td>
+</tr>
+</tbody>
+</table></div>
+<p>前五组问题各自撤去一项或两项默认条件。第 15、16 章回答评价什么：先把评价对象从策略换成学习器，再在没有回合终点时用平均奖励和差分价值定义长期目标。第 17 章回答怎样更新：经验不能存下来反复使用时，资格迹等在线信用分配方法从第 7 章的可选技巧变为必需。第 18–20 章回答依据什么状态：第 18 章讨论智能体状态在什么意义下够用，第 19 章用通用价值函数把预测对象从奖励扩展到任意信号，第 20 章讨论怎样从观测和这些预测中构造状态。第 21、22 章把决策单位从一步扩展为技能，并为技能建立模型以便规划，这与第 8 章的一步模型规划相对应。第 23 章让学习规则本身成为学习的对象，同时处理长期学习中可塑性下降的问题。</p>
+<p>最后三章处理把这些部件合成一个学习器时出现的三个问题：部件各自变好不保证整体变好，试探和写入知识都要花费真实的步数，实验只有一条 lifetime。第 24 章讨论整体智能体架构，第 25 章讨论知识写入之后怎样维护、检验与更新，第 26 章讨论在只有一条 lifetime 的条件下怎样设计基准和比较学习器。第 14 章还给出一种分层的读法：按决策间隔把智能体分成电机、运动、任务三层，业界分别称为系统 0、系统 1、系统 2；第 14.8 节在其上加一层调节思考与学习的系统 3，它作用于学习器自身，例如调节更新规则 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span></span></span></span> 和计算的分配。系统 3 是本课自己的提法，与文献中同名的其他说法不同。按这种读法，第三部分各章讨论的许多决定都可以看作系统 3 的决定。</p>
+</div>
+<section class="sec-summary"><h2 id="chapter-00-ch00-summary">本章小结</h2>
+<p>强化学习的问题是：智能体只能从自己行动换来的观测与奖励中学习，目标是让期望回报尽量大。用目标、约束、判据来写，目标是期望回报，约束是只靠自身经验，判据是多次独立运行的平均回报；检验的结果可以反过来修改问题的表述。阅读算法时可以问四件事：估计什么，样本从哪里来，为什么这样更新，更新怎样影响后续行动。</p>
+<p>全课三部分讨论同一个问题，依次放宽两项条件。第一部分（第 1–8 章）在状态少的条件下，先用赌博机和马尔可夫决策过程定义问题，再按模型已知、只有经验、从预测到控制、多步目标、学模型再规划的顺序给出表格方法。第二部分（第 9–14 章）在状态多的条件下用共享参数表示价值和策略，讨论经验的来源，并把方法放进语言环境与物理世界。第三部分（第 15–26 章）只保留一条不重来的经验流，评价对象变为学习器，第 3–14 章的七项默认条件被逐项撤去，最后三章讨论怎样把各部件合成一个学习器并加以评价。参考教材是 Sutton 与 Barto 的第二版，对应第一部分和第二部分的前半段，第 12 章以后主要依据近年论文。</p>
+</section><section class="sec-further"><h2 id="chapter-00-ch00-further-reading">延伸阅读</h2>
+<div class="further">
+<ul>
+<li>Sutton, R. S., &amp; Barto, A. G. (2018). <em>Reinforcement Learning: An Introduction</em> (2nd ed.). MIT Press. 本课的参考教材，第 1 章对强化学习问题和历史的介绍与本章内容对应。</li>
+<li>Sutton, R. S., Bowling, M., &amp; Pilarski, P. M. (2022). The Alberta Plan for AI Research. 以持续交互的智能体为中心的研究路线，第三部分的许多问题在其中有概括的表述。</li>
+<li>Silver, D., Singh, S., Precup, D., &amp; Sutton, R. S. (2021). Reward is enough. <em>Artificial Intelligence</em>. 论证在复杂环境中最大化奖励足以推动多种智能能力的形成，可与 0.2 节的不同意见对照阅读。</li>
+<li>Khetarpal, K., Riemer, M., Rish, I., &amp; Precup, D. (2022). Towards Continual Reinforcement Learning: A Review and Perspectives. <em>Journal of Artificial Intelligence Research</em>. 持续强化学习的综述，可作为第三部分的总体背景。</li>
+<li>Abel, D., Barreto, A., Van Roy, B., Precup, D., van Hasselt, H., &amp; Singh, S. (2023). A Definition of Continual Reinforcement Learning. <em>Advances in Neural Information Processing Systems</em>. 给出持续强化学习的形式定义，与第 15 章把评价对象换成学习器的做法相关。</li>
+<li>Sutton, R. S. (2019). The Bitter Lesson. 讨论随计算量扩展的通用方法与依赖人为知识的方法之间的长期比较，与第二部分的大规模训练有关。</li>
+</ul>
+</div>
+</section><h2 id="chapter-00-ch00-exercises">练习</h2>
+<div class="exercise">
+<p><strong>练习 0.1（0.1 节，目标、约束与判据）</strong>　选一个你熟悉的任务，例如下棋、调节室温或推荐新闻，按 0.1 节的框架写出它的目标、约束与判据，并说明这个任务在什么条件下属于强化学习问题。<em>提示：</em> 检查约束一项，看智能体能否得到正确动作的标注。<em>核对：</em> 若任务提供了每一步的正确动作，它更接近监督学习；只有对所选动作的评价时，才符合强化学习的约束。</p>
+</div>
+<div class="exercise">
+<p><strong>练习 0.2（0.1 节，四问）</strong>　用 0.1 节的四问分析一种你已经知道的学习方法，例如用平均值估计每个动作的奖励然后选最大者。逐项写出它估计什么、样本从哪里来、为什么这样更新、更新怎样影响后续行动。<em>提示：</em> 第四问是否成立取决于方法是否把估计用于选择动作。<em>核对：</em> 若总是选当前估计最大的动作，有些动作可能再也得不到样本，这正是第 2 章探索与利用问题的来源。</p>
+</div>
+<div class="exercise">
+<p><strong>练习 0.3（0.2 节，骑自行车）</strong>　按 0.2 节的例子，分别指出学骑自行车时的评价性反馈、延迟奖励和不完整观测各是什么；再说明旁人扶车和示范属于哪一类超出只凭奖励这一设定的信息。<em>提示：</em> 延迟奖励关注摔倒与几秒前哪个动作有关。<em>核对：</em> 示范提供了动作层面的信息，扶车改变了环境的转移，二者都不属于奖励。</p>
+</div>
+<div class="exercise">
+<p><strong>练习 0.4（0.4 节，默认条件）</strong>　对下列每种情形，指出它撤去了 0.4 节表中的哪一项默认条件：(a) 一台扫地机器人在家中连续运行数月，没有回合结束；(b) 智能体的观测只来自一个摄像头，看不到身后的物体；(c) 智能体内存有限，不能保存过去的经验；(d) 智能体要预测电池电量何时耗尽，而电量不是奖励。<em>提示：</em> 每种情形可能涉及不止一项条件，选最直接的一项。<em>核对：</em> 依次为 ②、④、③、⑤。</p>
+</div>
+<div class="exercise">
+<p><strong>练习 0.5（0.1 节，解法先于问题）</strong>　0.1 节提到一种不同意见：有些好的解法先于问题出现。举一个你知道的例子（可以来自机器学习之外），说明在这个例子中问题的目标、约束或判据是怎样在检验之后改写的。<em>提示：</em> 考虑一种方法最初为某一目的提出、后来在另一类问题上得到使用的情形。<em>核对：</em> 答案应指出改写发生在框架的哪一环节，以及改写前后判据的区别。</p>
+</div>
+<p>阅读后续各章需要一些概率、期望和不动点方面的推理，可先阅读<a href="prerequisites.html#chapter-00-prerequisites">预备知识</a>。</p>
+<p class="next-read">本章之后先读附录：<a href="prerequisites.html#chapter-00-prerequisites">附录　读公式时需要的几种推理</a>。它整理全课反复用到的几种推理：真值、估计与更新目标，条件期望，重要性采样，迭代与随机更新，对数导数。</p></article><footer class="site-foot"><span>温颖 · 强化学习：问题、方法与持续学习智能体</span><span><a data-nav="home" href="../index.html">课程资料主页</a>　<a data-nav="contribute" href="../contribute.html">欢迎贡献</a>　<a href="https://github.com/ying-wen/rl-course">GitHub</a>　<a href="https://yingwen.io/">yingwen.io</a></span><span class="foot-credit">课件与阅读稿引用的论文图、照片和截图，版权归原作者所有；每张图的出处写在图注或课件页脚。</span></footer></main><aside class="slide-panel" id="slide-panel" aria-label="本章课件"><div class="sp-head"><b></b><span class="sp-pos"></span><button class="sp-close" type="button" aria-label="收起课件">×</button></div><div class="sp-list" tabindex="-1"></div><p class="sp-empty" hidden>这一章没有对应的课件页。</p></aside><div class="sp-scrim"></div><a class="top" href="#top">回到开头 ↑</a><script type="application/json" id="slide-map">{"chapter-00-slide-problem-01":{"n":"chapter-00-slide-problem-01","f":[["problem-01",1,"强化学习"]],"c":"0.1 强化学习要解决的问题"},"chapter-00-slide-course-textbook":{"n":"chapter-00-slide-course-textbook","f":[["course-textbook",2,"参考教材"]],"c":"0.3 参考教材与读法"},"chapter-00-slide-course-thinking":{"n":"chapter-00-slide-course-thinking","f":[["course-thinking",3,"问题—解法"]],"c":"0.1 强化学习要解决的问题"},"chapter-00-slide-course-question":{"n":"chapter-00-slide-course-question","f":[["course-question",4,"本课尝试解决的问题"]],"c":"0.2 这门课问什么"},"chapter-00-slide-contents-1":{"n":"chapter-00-slide-contents-1","f":[["contents-1",5,"课程目录：第一部分　表格方法"]],"c":"第一部分 表格方法"},"chapter-00-slide-contents-2":{"n":"chapter-00-slide-contents-2","f":[["contents-2",6,"课程目录：第二部分　近似方法与现代智能体"]],"c":"第二部分 近似方法与现代智能体"},"chapter-00-slide-contents-3":{"n":"chapter-00-slide-contents-3","f":[["contents-3",7,"课程目录：第三部分　持续强化学习"]],"c":"第三部分 持续强化学习"}}</script><script>(()=>{const slide=new URLSearchParams(location.search).get('slide'),b=document.getElementById('back');
+if(b&&slide&&/^[A-Za-z0-9_-]+$/.test(slide)){b.href='../reader/index.html?route=all#'+slide;b.hidden=false}})();</script><script src="../assets/reading-7c8e49c480.js" defer></script></body></html>

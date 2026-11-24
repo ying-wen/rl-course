@@ -1,0 +1,45 @@
+/* 阅读稿交互演示（tools/demos/）。颜色全部取阅读器的主题变量，亮暗主题自动跟随。 */
+.demo{--d1:var(--accent);--d2:#d97706;--d3:#dc2626;--d4:#0d9488;--d5:#7c3aed;
+ margin:2em 0;padding:1em 1.15em 1.05em;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .demo{--d2:#fbbf24;--d3:#f87171;--d4:#2dd4bf;--d5:#c4b5fd}}
+:root[data-theme=dark] .demo{--d2:#fbbf24;--d3:#f87171;--d4:#2dd4bf;--d5:#c4b5fd}
+.demo::before{content:"交互演示";display:block;margin:0 0 .35em;font:600 12.5px/1.6 var(--sans);letter-spacing:.08em;color:var(--accent-strong)}
+.demo[title]::before{content:"交互演示　" attr(title)}
+.demo>p{margin:0 0 .6em}
+.demo>:last-child{margin-bottom:0}
+.demo-stage{margin:.3em 0 .9em;font:14px/1.5 var(--sans);color:var(--ink)}
+.demo-stage canvas{display:block;width:100%;touch-action:manipulation;border-radius:6px}
+.demo-row{display:flex;flex-wrap:wrap;gap:.5em 1.1em;align-items:center;margin:.55em 0}
+.demo-row[hidden]{display:none}
+.demo-grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15em),1fr));gap:.8em 1.2em;align-items:start}
+.demo-grid2>*{min-width:0}
+.demo-btn{font:500 13.5px/1 var(--sans);padding:.5em .9em;border:1px solid var(--rule);border-radius:7px;background:var(--bg);color:var(--ink);cursor:pointer}
+.demo-btn:hover{border-color:var(--accent);color:var(--accent-strong)}
+.demo-btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.demo-btn.primary:hover{background:var(--accent-strong);color:var(--bg)}
+.demo-btn:focus-visible,.demo-seg button:focus-visible,.demo-range input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.demo-range{display:inline-flex;align-items:center;gap:.5em;font-size:13.5px;color:var(--soft)}
+.demo-range input{width:8.5em;accent-color:var(--accent)}
+.demo-range output{min-width:3.2em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.demo-seg{display:inline-flex;border:1px solid var(--rule);border-radius:7px;overflow:hidden}
+.demo-seg button{font:500 13px/1 var(--sans);padding:.5em .8em;border:0;border-right:1px solid var(--rule);background:var(--bg);color:var(--soft);cursor:pointer}
+.demo-seg button:last-child{border-right:0}
+.demo-seg button[aria-pressed=true]{background:var(--accent-soft);color:var(--accent-strong);font-weight:600}
+.demo-check{display:inline-flex;align-items:center;gap:.4em;font-size:13.5px;color:var(--soft)}
+.demo-check input{accent-color:var(--accent)}
+.demo-read{font:13.5px/1.6 var(--sans);color:var(--soft);font-variant-numeric:tabular-nums}
+.demo-read b{color:var(--ink);font-weight:600}
+.demo-legend{display:flex;flex-wrap:wrap;gap:.3em 1em;font-size:13px;color:var(--soft)}
+.demo-legend i{display:inline-block;width:1.4em;height:3px;border-radius:2px;margin-right:.35em;vertical-align:middle}
+.demo-note{font-size:13px;color:var(--muted)}
+.demo-steps{text-align:left;margin:.7em 0 0;padding:.6em .9em .5em;border-left:3px solid var(--accent);border-radius:0 8px 8px 0;background:var(--tint);font:13.5px/1.75 var(--sans);color:var(--soft);overflow-x:auto}
+.demo-steps-head{font-weight:600;color:var(--ink);margin-bottom:.15em}
+.demo-steps ol{margin:0;padding-left:1.4em}
+.demo-steps li{margin:.1em 0;text-align:left}
+.demo li,.demo td,.demo th{text-align:left}
+.demo-sd{margin-right:.6em}
+.demo-m{font-family:KaTeX_Main,"Latin Modern Math","STIX Two Math","Cambria Math","Times New Roman",serif;font-size:1.06em;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.demo-m i{font-family:KaTeX_Math,"Latin Modern Math","STIX Two Math","Cambria Math","Times New Roman",serif}
+.demo-m sub,.demo-m sup{font-size:.72em;line-height:0}
+.demo-m b{font-weight:700;color:var(--accent-strong)}
+@media print{.demo-stage{display:none}}

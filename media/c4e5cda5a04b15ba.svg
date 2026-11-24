@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 572" role="img" aria-labelledby="title desc">
+<title id="title">同一条经验流上，提出问题、检验预测与决定试练的时刻</title>
+<desc id="desc">标记 a 后出现 b 启发一个有期限的预测。登记问题后的两次预测分别命中和到期未中。进行试练与沿用主策略引出不同的原始动作和学习器记忆，只有一条未来真实发生。</desc>
+<defs><marker id="tip" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path fill="#41596b" d="M0 0 10 5 0 10Z"/></marker></defs>
+<style>
+text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#193445}.heading{font-size:26px;font-weight:700}.sub{font-size:17px;fill:#486173}.label{font-size:18px;font-weight:600}.token{font-size:17px;font-weight:700;fill:#fff;text-anchor:middle}.token text{fill:white;text-anchor:middle}.sm{font-size:16px}.note{font-size:17px}.line{fill:none;stroke:#41596b;stroke-width:2.5}.faint{stroke:#8a9ba7;stroke-width:2.5;fill:none;stroke-dasharray:6 5}
+</style>
+<rect width="1020" height="572" fill="#fff"/>
+<rect x="12" y="10" width="996" height="248" rx="14" fill="#f5f9fa"/>
+<text x="34" y="49" class="heading">发现事件与检验预测用的是先后两段经验</text>
+<text x="34" y="80" class="sub">可用感觉信号 a、b 与有限的时间窗；横轴的每一步都是一次真实交互。</text>
+<path class="line" d="M47 151H963" marker-end="url(#tip)"/>
+<g fill="#277e78"><circle cx="85" cy="151" r="15"/><circle cx="476" cy="151" r="15"/><circle cx="744" cy="151" r="15"/></g>
+<g fill="#ac5437"><rect x="174" y="136" width="30" height="30" rx="3"/><rect x="556" y="136" width="30" height="30" rx="3"/></g>
+<g class="token"><text x="85" y="157">a</text><text x="189" y="157">b</text><text x="476" y="157">a</text><text x="571" y="157">b</text><text x="744" y="157">a</text></g>
+<g class="line" stroke-linecap="round"><path d="M85 126v-13h104v13"/><path d="M476 126v-13h145v13"/><path d="M744 126v-13h145v13"/></g>
+<g class="sm" text-anchor="middle"><text x="137" y="103">相继出现</text><text x="549" y="103">预测期限</text><text x="817" y="103">同一预测期限</text></g>
+<path d="M321 100v94" stroke="#456a82" stroke-width="2" stroke-dasharray="5 4"/>
+<g class="sm" text-anchor="middle"><text x="145" y="195">经验提出事件 a → b</text><text x="321" y="217">登记问题与目标策略</text><text x="547" y="195">在限期内命中：1</text><text x="820" y="195">到期未命中：0</text></g>
+<text x="34" y="242" class="sub">命中与未命中都提供预测样本。改变行为去提高命中率，则产生一个控制子问题。</text>
+<rect x="12" y="269" width="996" height="291" rx="14" fill="#f8f7f3"/>
+<text x="34" y="309" class="heading">同一时刻的两种学习安排，引出两条可能的未来</text>
+<text x="34" y="340" class="sub">在同一历史、同一记忆和剩余预算下作决定。每格占用一个真实步。</text>
+<circle cx="108" cy="430" r="8" fill="#253d51"/>
+<path class="line" d="M116 430L220 392H278" marker-end="url(#tip)"/><path class="faint" d="M116 430l104 48h58"/>
+<text x="46" y="455" class="sm">当前决策</text>
+<text x="222" y="383" class="sm">试练</text><text x="197" y="502" class="sm">照常控制</text>
+<g fill="#ca6e4c"><rect x="295" y="374" width="43" height="33" rx="4"/><rect x="343" y="374" width="43" height="33" rx="4"/></g>
+<g fill="#277e78"><rect x="391" y="374" width="43" height="33" rx="4"/><rect x="439" y="374" width="43" height="33" rx="4"/><rect x="487" y="374" width="43" height="33" rx="4"/></g>
+<g fill="none" stroke="#80959e" stroke-width="1.8" stroke-dasharray="5 3"><rect x="295" y="458" width="43" height="33" rx="4"/><rect x="343" y="458" width="43" height="33" rx="4"/><rect x="391" y="458" width="43" height="33" rx="4"/><rect x="439" y="458" width="43" height="33" rx="4"/><rect x="487" y="458" width="43" height="33" rx="4"/></g>
+<path class="line" d="M541 390h57" marker-end="url(#tip)"/><path class="faint" d="M541 475h57"/>
+<text x="615" y="389" class="label">观察到试练奖励，也获得新的技能经验</text><text x="615" y="413" class="sm">之后的规划可读取更新后的模型。</text>
+<text x="615" y="471" class="label">沿用旧知识也会取得奖励</text><text x="615" y="495" class="sm">图中走了上支，下支的回报未被观测。</text>
+<text x="34" y="539" class="note">练习的价值比较从此刻到评价截止的外部总奖励；只看试练期间的成功率会漏掉两支此后的收益。</text>
+</svg>
